@@ -1,1 +1,186 @@
-<!-- marks new comment  -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+	<head>
+
+        <meta charset="utf-8">
+		<meta name="author" content="Denays Cobas Lamezon" />
+		<meta name="description" content= "Survey" />
+
+		<title>Survey</title>
+
+
+ 		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<script type="text/javascript" src="javascript/jquery-1.8.3.min.js"></script>
+
+	</head>
+	<body>
+		<div id = "complete_wrap">
+			<h1> Survey </h1>
+			<form action = "">
+				<div>
+					<h3>Personal Information</h3>
+						<div>
+							<label for="F_name"><strong>First name:</strong></label> <input type="text" name="F_name" id="F_name" value= ""/>
+						</div>
+						<div>
+							<label for="L_name"><strong>Last name:</strong></label> <input type="text" name="L_name" id="L_name" value= ""/>
+						</div>
+						<div>
+							<label for="age"><strong>Age:</strong></label> <input type="text" size ="5" name="age" id="age" value= "" />
+						</div>
+						<div>
+							<label for="gender"><strong>Gender</strong></label></br> 
+							<input type="radio" name="t_gender" id="m_gender" value="Male" /><label for="m_gender">Male</label><br />
+							<input type="radio" name="t_gender" id="f_gender" value="Female"/><label for="f_gender">Female</label><br />
+							<input type="radio" name="t_gender" id="x_gender" value="x"/> <label for="x_gender">Undisclosed</label><br />	
+						</div>
+					<h3> Medical Information </h3>
+							<!--<label for = "info"><strong>Do you have a grandparent,parent,or sibling who, prior age 55 has has:</strong></label></br>
+							<label for="medical_history">a heart attack?</label>
+								<span id = "separator">
+									<input type="radio" name="t_heart" id="a_symtom" value="yes" /><label for="a_symtom">Yes</label>
+									<input type="radio" name="t_heart" id="b_symtom" value="no"/><label for="b_symtom">No</label><br>
+								</span>	
+							<label for="medical_history">a stroke?</label>
+								<span id = "separator1">
+									<input type="radio" name="t_heart" id="c_symtom" value="yes" /><label for="c_symtom">Yes</label>
+									<input type="radio" name="t_heart" id="d_symtom" value="no"/><label for="d_symtom">No</label></br>
+								</span>
+							<label for="medical_history">high blood pressure?</label>
+								<span id = "separator2">
+									<input type="radio" name="t_heart" id="e_symtom" value="yes" /><label for="e_symtom">Yes</label>
+									<input type="radio" name="t_heart" id="f_symtom" value="no"/><label for="f_symtom">No</label></br>
+								</span>
+							<label for="medical_history">high cholesterol?</label>
+								<span id = "separator3">
+									<input type="radio" name="t_heart" id="g_symtom" value="yes" /><label for="g_symtom">Yes</label>
+									<input type="radio" name="t_heart" id="h_symtom" value="no"/><label for="h_symtom">No</label></br>
+								</span>
+							<label for="medical_history">Weight(obesity) problems?</label>
+								<span id = "separator4">
+									<input type="radio" name="t_heart" id="i_symtom" value="yes" /><label for="i_symtom">Yes</label>
+									<input type="radio" name="t_heart" id="j_symtom" value="no"/><label for="j_symtom">No</label>
+								</span>-->
+								
+							<div>
+								<label for = "info"><strong>Do you have any of the following:</strong></label></br>
+								<label for="current_medical_info">high blood pressure</label>
+									<span id = "separator5">
+										<input type="radio" name="disease" id="k_symtom" value="yes" /><label for="k_symtom">Yes</label>
+										<input type="radio" name="disease" id="l_symtom" value="no"/><label for="l_symtom">No</label></br>
+									</span>
+								<label for="current_medical_info">high cholesterol</label>
+									<span id = "separator6">
+										<input type="radio" name="disease" id="m_symtom" value="yes"/><label for="m_symtom">Yes</label>
+										<input type="radio" name="disease" id="n_symtom" value="no"/><label for="n_symtom">No</label></br>
+									</span>
+								<label for="current_medical_info">diabetis</label>
+									<span id = "separator7">
+										<input type="radio" name="disease" id="o_symtom" value="yes" /><label for="o_symtom">Yes</label>
+										<input type="radio" name="disease" id="p_symtom" value="no"/><label for="p_symtom">No</label></br>
+									</span>
+								<label for="current_medical_info">known heart disease</label>
+									<span id = "separator8">
+										<input type="radio" name="disease" id="q_symtom" value="yes" /><label for="q_symtom">Yes</label>
+										<input type="radio" name="disease" id="r_symtom" value="no"/><label for="r_symtom">No</label></br>
+									</span>
+								<label for="current_medical_info">emphysema</label>
+									<span id = "separator9">
+										<input type="radio" name="disease" id="s_symtom" value="yes" /><label for="s_symtom">Yes</label>
+										<input type="radio" name="disease" id="t_symtom" value="no"/><label for="t_symtom">No</label></br>
+									</span>
+								<label for="current_medical_info">thyroid or kidney disorders</label>
+									<span id = "separator10">
+										<input type="radio" name="disease" id="u_symtom" value="yes" /><label for="u_symtom">Yes</label>
+										<input type="radio" name="disease" id="v_symtom" value="no"/><label for="v_symtom">No</label></br>
+									</span>	
+								<label for="current_medical_info">epilepsy</label>
+									<span id = "separator11">
+										<input type="radio" name="disease" id="w_symtom" value="yes" /><label for="w_symtom">Yes</label>
+										<input type="radio" name="disease" id="x_symtom" value="no"/><label for="x_symtom">No</label></br>	
+									</span>	
+								<label for="current_medical_info">asthma</label>
+									<span id = "separator12">
+										<input type="radio" name="disease" id="y_symtom" value="yes" /><label for="y_symtom">Yes</label>
+										<input type="radio" name="disease" id="z_symtom" value="no"/><label for="z_symtom">No</label>
+									</span>		
+							</div>
+						
+						<h3> Personal Fitness </h3>
+							<div>
+								<label for="P_fitness"><strong>Presently, do you excercise on a regular basis?</strong></label>
+									<input type="radio" name="t_fitness" id="a_fitness" value="yes" /><label for="a_fitness">Yes</label>
+									<input type="radio" name="t_fitness" id="b_fitness" value="no"/><label for= "b_fitness">No</label><br>	
+								<div>
+									<label for="days"><strong>How many days per week do you excercise:</strong></label> <input type="text" name="days" id="days" value= ""/>
+								</div>
+								<div>
+									<label for="minutes"><strong>How many minutes per day:</strong></label> <input type="text" name="minutes" id="minutes" value= ""/>
+								</div>	
+								<div>
+									<label for="perception"><strong> Assign a number 1 throught 5 to rate the following 
+									statements accroding to your perception of the following, 1 represents the lowest and 5 the represents the 
+									highest level.</strong></label></br>
+								</div>
+								<label for="current_fitness_info">How fit you currently feel?</label>
+									<span id = "separator13">
+										<input type="radio" name="fit" id="a_fit" value="1" /><label for="a_fit">1</label>
+										<input type="radio" name="fit" id="b_fit" value="2"/><label for="b_fit">2</label>
+										<input type="radio" name="fit" id="c_fit" value="3"/><label for="c_fit">3</label>
+										<input type="radio" name="fit" id="d_fit" value="4"/><label for="d_fit">4</label>
+										<input type="radio" name="fit" id="e_fit" value="5"/><label for="e_fit">5</label></br>
+									</span>	
+									<label for="current_fitness_info">Your capacity for aerobic activities</label>
+									<span id = "separator14">
+										<input type="radio" name="fit1" id="a_fit" value="1" /><label for="a_fit">1</label>
+										<input type="radio" name="fit1" id="b_fit" value="2"/><label for="b_fit">2</label>
+										<input type="radio" name="fit1" id="c_fit" value="3"/><label for="c_fit">3</label>
+										<input type="radio" name="fit1" id="d_fit" value="4"/><label for="d_fit">4</label>
+										<input type="radio" name="fit1" id="e_fit" value="5"/><label for="e_fit">5</label></br>
+									</span>	
+									<label for="current_fitness_info">Your muscular strength</label>
+									<span id = "separator15">
+										<input type="radio" name="fit2" id="a_fit" value="1" /><label for="a_fit">1</label>
+										<input type="radio" name="fit2" id="b_fit" value="2"/><label for="b_fit">2</label>
+										<input type="radio" name="fit2" id="c_fit" value="3"/><label for="c_fit">3</label>
+										<input type="radio" name="fit2" id="d_fit" value="4"/><label for="d_fit">4</label>
+										<input type="radio" name="fit2" id="e_fit" value="5"/><label for="e_fit">5</label></br>
+									</span>
+									<label for="current_fitness_info">Your body's flexibility</label>
+									<span id = "separator16">
+										<input type="radio" name="fit3" id="a_fit" value="1" /><label for="a_fit">1</label>
+										<input type="radio" name="fit3" id="b_fit" value="2"/><label for="b_fit">2</label>
+										<input type="radio" name="fit3" id="c_fit" value="3"/><label for="c_fit">3</label>
+										<input type="radio" name="fit3" id="d_fit" value="4"/><label for="d_fit">4</label>
+										<input type="radio" name="fit3" id="e_fit" value="5"/><label for="e_fit">5</label></br>
+									</span>	
+									<!--<div>
+										<label for="exersice"><strong>How much time will you devote to an exercice program?</strong></label></br>
+										<label for="a_days">days per week</label> <input type="text" name="a_days" size = "5" id="a_days" value= ""/>
+										<label for="a_minutes">minutes per day</label> <input type="text" size = "6" name="a_minutes" id="a_minutes" value= ""/>
+									</div>-->
+									<div>
+										<label for="exercise"><strong>What exercises  you enjoy the most?</strong></label> </br> 
+											<input type="checkbox" name="exercise1" id="a_walk" value="walk"  /><label for="a_walk">Walking</label><br />
+											<input type="checkbox" name="exercise2" id="a_jog" value="jog"  /><label for="a_jog">Jogging</label><br />
+											<input type="checkbox" name="exercise3" id="a_run" value="walk"  /><label for="a_run">Running</label><br />
+											<input type="checkbox" name="exercise4" id="a_swim" value="swim"  /><label for="a_swim">Swimming</label><br />
+											<input type="checkbox" name="exercise5" id="a_aerobic" value="aerobic"  /><label for="a_aerobic">Aerobics</label><br />
+											<input type="checkbox" name="exercise6" id="a_pull" value="pull"  /><label for="a_pull">Pull-ups</label><br />
+											<input type="checkbox" name="exercise7" id="a_push" value="push"  /><label for="a_push">Push-ups</label><br />
+											<input type="checkbox" name="exercise8" id="a_sit" value="sit"  /><label for="a_sit">Sit-ups</label><br />
+											<input type="checkbox" name="exercise9" id="a_weight" value="weight"  /><label for="a_weight">Weight lifting</label><br />	 
+									</div>
+									<div>
+										<label for="goal"><strong>Let us know the goal you'd like to reach.</strong></label><br />
+										<textarea name="my_goal" id="goal" rows="5" cols="30"></textarea>
+									</div>
+									<div>
+										<input type="submit" value="Submit Information" />
+									</div>
+							</div>						
+				</div>
+			</form>
+		</div>	
+	</body>
+</html>	
