@@ -6,7 +6,7 @@ var  tags = $.cookie("tags");
 	
 	if(tags.indexOf("lowCardio") == -1){
 		console.log("remiving ")
-		$("mennu").remove("lowCardio");
+		$("menu").hide(".lowCardio");
 	}
 	if(tags.indexOf("lowStrength") == -1){
 		console.log("remiving ")
