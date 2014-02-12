@@ -6,20 +6,20 @@ $(document).ready( function() {
 	*/
 	$(submit).click(function(){
 	// Tag variables for counting occurence.
-		var lcardio;		// low cardio  variable
-		var lstr;			// low strenght variable
-		var hcardio;		//high cardio	varible
-		var hstr;		   // high strength variable
-		var lintensity; // low intensity	variable
-		var hintensity;
-		var firstName; 
-		var lastName;
-		var gender;
-		var age;
+		var lcardio =0;		// low cardio  variable
+		var lstr= 0;			// low strenght variable
+		var hcardio= 0;		//high cardio	varible
+		var hstr= 0;		   // high strength variable
+		var lintensity = 0; // low intensity	variable
+		var hintensity = 0;
+		var firstName = 0; 
+		var lastName = 0;
+		var gender = 0;
+		var age = 0;
 		
 		firstName = $(F_name).val();
 		lastName  = $(L_name).val();
-		age = $(age).val();
+		age = parseInt($(age).val());
 		gender = $('input[name = t_gender]:checked').val();
 		
 		// Process tags for age.
@@ -27,28 +27,41 @@ $(document).ready( function() {
 			lcardio += (age - 40)/10;
 			lstr += (age - 40)/10;
 		}
-		// Special condition tags processing.
-		lintensity += $(diabetes).val() ?  5 : 0 ;
-		lstr += $(heartD).val() ? 2 : 0; 
-		lcardio += $(heartD).val() ? 5 : 0;
-		lcardio	+= $(emphy).val() ? 5 : 0;
-		lintensity	+= $(emphy).val() ? 5 : 0;
-		lcardio	+= $(asthma).val() ? 5 : 0;
+		//Special condition tags processing.
+		console.log($(diabetes).val());
+		lintensity += $(diabetes).val().indexOf("diabetes") != -1 ?  5 : 0 ;
+		lstr += $(heartD).val().indexOf("heartD") != -1 ? 2 : 0; 
+		lcardio += $(heartD).val().indexOf("heartD") != -1 ? 5 : 0;
+		lcardio	+= $(emphy).val().indexOf("emphy") != -1 ? 5 : 0;
+		lintensity	+= $(emphy).val().indexOf("emphy") != -1 ? 5 : 0;
+		lcardio	+= $(asthma).val().indexOf("asthma") != -1 ? 5 : 0;
 		
 		//
-		 hintensity += $('input[name = fit]:checked').val();
-		 lintensity += (5 - ($('input[name = fit]:checked').val()));
+		console.log(parseInt($('input[name = fit]:checked').val()))
+		 hintensity += parseInt($('input[name = fit]:checked').val());
+		 lintensity += (5 - parseInt($('input[name = fit]:checked').val()));
 		 
-		 hcardio += $('input[name = fit1]:checked').val();
-		 lcardio += (5 - ($('input[name = fit1]:checked').val()));
-		
-		 hstr += $('input[name = fit2]:checked').val();
-		 lstr += (5 - ($('input[name = fit2]:checked').val()));
+		 hcardio += parseInt($('input[name = fit1]:checked').val());
+		 lcardio += (5 - parseInt($('input[name = fit1]:checked').val()));
+		console.log(parseInt($('input[name = fit2]:checked').val()));
+		 hstr += parseInt($('input[name = fit2]:checked').val());
+		 lstr += (5 - parseInt($('input[name = fit2]:checked').val()));
 		 
-		 hstr += $('input[name = fit3]:checked').val();
-		 lstr += (5 - ($('input[name = fit3]:checked').val()));	 
+		 hstr += parseInt($('input[name = fit3]:checked').val());
+		 lstr += (5 - parseInt($('input[name = fit3]:checked').val()));	 
 		 
 		 
+		 
+
+		 // lintensity= 1;
+		 // hintensity= 2;
+		 // lstr = 3;
+		 // hstr = 4;
+		 // lcardio = 5;
+		 // hcardio = 6;
+
+
+
 		 var tags = '';
 		 var tagArray = new Array();
 		 tagArray[0] = lintensity;
@@ -69,32 +82,32 @@ $(document).ready( function() {
 			}
 			switch(max){
 				case 0:
-					tags += 'low intensity, ';
+					tags += 'lowIntensity, ';
 					break;
 				case 1:
-					tags += 'high intensity, ';
+					tags += 'highIntensity, ';
 					break;
 				case 2:
-					tags += 'low strength, ';
+					tags += 'lowStrength, ';
 					break;
 				case 3:
-					tags += 'high strength, ';
+					tags += 'highStrength, ';
 					break;
 				case 4:
-					tags += 'low cardio, ';
+					tags += 'lowCardio, ';
 					break;
 				case 5:
-					tags += 'high cardio, ';
+					tags += 'highCardio, ';
 					break;
 			}
 			tagArray[max] = -1;
 		 }
-		 
-		 alert(tags);
-		 
+
+		 console.log(tags);
 		
-		 
+		 $.cookie("tags",tags,{ path : '/' , expires: 7});
+		 $.cookie("user", firstName, { path: '/', expires: 7 })
+		 alert($.cookie("tags")); 
 	})
-	
-	} )
+}) 
 
