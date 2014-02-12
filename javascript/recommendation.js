@@ -6,25 +6,29 @@ var  tags = $.cookie("tags");
 	
 	if(tags.indexOf("lowCardio") == -1){
 		console.log("remiving ")
-		$("menu").hide(".lowCardio");
+		$("#lowCardio").hide();
 	}
 	if(tags.indexOf("lowStrength") == -1){
 		console.log("remiving ")
-		$("lowStrength").remove();
+		$("#lowStrength").hide();
 	}
 	
 	if(tags.indexOf("highCardio") == -1){
 		console.log("remiving ")
-		$("highCardio").remove();
+		$("#highCardio").hide();
 	}
 	if(tags.indexOf("highStrength") == -1){
 		console.log("remiving ")
-		$("highStrength").remove();
+		$("#highStrength").hide();
+	}
+	if(tags.indexOf("lowIntensity") == -1){
+		console.log("remiving ")
+		$("#lowIntensity").hide();
 	}
 	
 	if(tags.indexOf("highIntensity") == -1){
 		console.log("remiving ")
-		$("highIntensity").remove();
+		$("#highIntensity").hide();
 	}
 	
 	
