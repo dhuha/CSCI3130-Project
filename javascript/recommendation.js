@@ -1,8 +1,12 @@
 $(document).ready( function() {
+//get the tags cookie
 var  tags = $.cookie("tags");
-	if(tags == null){
-		tags ="";
-	}
+if(tags == null){
+	tags ="";
+}
+
+console.log(tags);
+	//hide reccomendations that havent been tagged
 	
 	if(tags.indexOf("lowCardio") == -1){
 		console.log("remiving ")
