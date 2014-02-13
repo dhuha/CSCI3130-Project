@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="javascript/jquery-1.8.3.min.js"></script>
+	<link rel="shortcut icon" type="image/png" href="lib/jasmine_favicon.png">
+	<link rel="stylesheet" type="text/css" href="lib/jasmine.css">
+
+	<script type="text/javascript" src="lib/jasmine.js"></script>
+	<script type="text/javascript" src="lib/jasmine-html.js"></script>
+	<script type="text/javascript" src="lib/boot.js"></script>
+
+	
   <title> Your Health Process </title>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   <style type="text/css" src="your_health_process.css"></style> 
+  <script type = "text/javascript" src = "javascript/cookie.js"></script>
+  <script type="text/javascript" src="javascript/recommendation.js"></script>
 </head>
 <script>
   $(function() {
@@ -29,7 +41,8 @@ bar chart</div>
 
 <h2>Recommendation</h2>
 <ul id="menu">
-  <li><a href="#">Light Cardio</a> 
+  <li id = "lowCardio">
+  <a href="#">Low Cardio</a> 
   <ul>
    <li><a href="
 http://www.popworkouts.com/7-min-light-cardio-workout/
@@ -39,7 +52,7 @@ http://www.popworkouts.com/7-min-light-cardio-workout/
     </ul>
   </li>
 
-  <li>
+  <li id="lowStrength">
     <a href="#">Low Strength</a>
     <ul>
       <li ><a href="http://www.helpguide.org/life/workouts_exercise_overweight_disabled.htm" target = "_blank">Chair Workout</a></li>
@@ -47,7 +60,7 @@ http://www.popworkouts.com/7-min-light-cardio-workout/
       <li><a href="http://www.sparkpeople.com/blog/blog.asp?post=4_workouts_for_people_with_limited_mobility " target = '_blank'>Limited Mobility Workout</a></li>
     </ul>
   </li>
-   <li>
+   <li id="highCardio">
     <a href="#">High Cardio</a>
     <ul>
       <li><a href="http://exercise.about.com/od/cardioworkouts/tp/cardioexercise.html " target = "_blank">Basic Workout</a></li>
@@ -56,8 +69,8 @@ http://www.popworkouts.com/7-min-light-cardio-workout/
       <li><a href="http://www.youtube.com/watch?v=ClXs1Ef2SKo" target = "_blank">Workout at Home</a></li>
     </ul>
   </li>
-   <li>
-    <a href="#">Beef It Up</a>
+   <li class="highStrength">
+    <a href="#">High Strength</a>
     <ul>
       <li><a href="http://www.bodybuilding.com" target = "_blank"> Ideas at Bodybuilding</a></li>
       <li><a href="
@@ -66,7 +79,7 @@ http://www.popworkouts.com/7-min-light-cardio-workout/
     </ul>
   </li>
   
-   <li>
+   <li class="lowIntensity">
     <a href="#">Low Intensity</a>
     <ul>
       <li><a href="http://www.realbuzz.com/articles/top-6-low-intensity-workouts/ " target = "_blank">Top Six Workout Ideas</a></li>
@@ -74,6 +87,17 @@ http://www.popworkouts.com/7-min-light-cardio-workout/
       <li><a href="http://weightloss.about.com/od/exercis1/a/Exercise-Intensity-How-Hard-Should-I-Exercise-To-Lose-Weight.htm " target = '_blank'>Losing Weight</a></li>
     </ul>
   </li>
+  
+   <li class="highIntensity">
+    <a href="#">High Intensity</a>
+    <ul>
+      <li><a href="http://www.youtube.com/watch?v=hdDNM35Bt1Y " target = "_blank">Workout For Beginners</a></li>
+      <li><a href="http://www.youtube.com/watch?v=sQs6It4m5xY" target = "_blank">Workout  For Women </a></li>
+      <li><a href="http://www.youtube.com/watch?v=rAFXn1tgYXQ " target = '_blank'>Workout for Men</a></li>
+    </ul>
+  </li>
+  
+  
 </ul></div>
 <div id="footer2" style="background-color:#FFA500;height:200px;width:550px;float:left;">
 Feeds
