@@ -1,3 +1,4 @@
+//run on document load
 $(document).ready( function() {
 	//set onclick listener for submit button
 	$(submit).click(function(){
