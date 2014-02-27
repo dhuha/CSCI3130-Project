@@ -97,9 +97,13 @@ $(document).ready( function() {
 		$.cookie("user", firstName, { path: '/', expires: 7 })
 
 		//load the next page.
-		window.location = "userpage.html"
-		console.log("changing page")
 
+		var cont = false;
+		cont = window.confirm("Continue?");
+		if(cont == true){
+			window.location = "userpage.html"
+			console.log("changing page")
+		}
 	})
 }) 
 
