@@ -45,12 +45,18 @@ describe("form", function() {
         var f1 = parseInt($('input[name = fit1]:checked').val());
         var f2 = parseInt($('input[name = fit2]:checked').val());
         var f3 = parseInt($('input[name = fit3]:checked').val());
-        expect(f === 4);
-        expect(f1 === 5);
-        expect(f2 === 3);
-        expect(f3 === 1);
+        expect(f).toEqual(4);
+        expect(f1).toEqual(5);
+        expect(f2).toEqual(3);
+        expect(f3).toEqual(1);
 
     });
+    it('should create a cookie with non null text',function(){
+        submitButton.click();
+        var  cookieText = $.cookie("tags");
+        console.log(cookieText == null);
+        expect(cookieText != null ).toEqual(true);
+    })
 
 
 
