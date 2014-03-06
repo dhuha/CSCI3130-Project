@@ -7,6 +7,15 @@ describe("Reccomendations", function() {
     it('should get non empty tags',function(){
 
     });
+    it('should get a response from the server',function(){
+        var hello;
+        $.get("centi.cs.dal.ca:30000/hello" ,
+            function(data, textStatus, jqXHR){
+                console.log(data);
+                return expect(data).toEqual("hello world");
+            }
+        )
+    });
     it('should show reccomendations',function(){
 
     });

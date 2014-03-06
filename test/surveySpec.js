@@ -57,8 +57,18 @@ describe("form", function() {
         console.log(cookieText == null);
         expect(cookieText != null ).toEqual(true);
     })
+    it('should get a response from the server',function(){
+        var hello;
+        $.get("centi.cs.dal.ca:30000/hello" ,
+            function(data, textStatus, jqXHR){
+                console.log(data);
+                return expect(data).toEqual("hello world");
+            }
+        )
+    });
+    it('should add a new user to the server'){
+        expect(false).toEqual(true);
 
-
-
+    }
 
 })          

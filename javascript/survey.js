@@ -94,7 +94,7 @@ $(document).ready( function() {
 		
 		//start a cookie with the tags and the username. 
 		$.cookie("tags",tags,{ path : '/' , expires: 7});
-		$.cookie("user", firstName, { path: '/', expires: 7 })
+		$.cookie("user", firstName, { path: '/', expires: 7 });
 
 		//load the next page.
 
