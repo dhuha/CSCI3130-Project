@@ -1,7 +1,7 @@
 //run on document load
 $(document).ready( function() {
 	//get the tags cookie
-	var  tags = $.cookie("tags");
+	var  tags = getTags();
 	if(tags == null){
 		tags ="";
 	}
@@ -38,6 +38,8 @@ $(document).ready( function() {
 		console.log("removing ")
 		$("#highIntensity").hide();
 	}
-
+	function getTags() {
+		 return $.cookie("tags");
+	}
 
 })
