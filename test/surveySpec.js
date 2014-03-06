@@ -62,13 +62,12 @@ describe("form", function() {
         $.get("centi.cs.dal.ca:30000/hello" ,
             function(data, textStatus, jqXHR){
                 console.log(data);
-                return expect(data).toEqual("hello world");
-            }
-        )
+                hello = data;
+            });
+        expect(hello).toEqual("hello world");
     });
-    it('should add a new user to the server'){
+    it('should add a new user to the server',function(){
         expect(false).toEqual(true);
-
-    }
+    });
 
 })          
