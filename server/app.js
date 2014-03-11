@@ -11,6 +11,7 @@
  var Schema = mongoose.Schema;
  var db = mongoose.connection;
  var Users;
+
  db.on('error', console.error.bind(console, 'connection error:'));
  db.once('open', function callback () {
   var userSchema = new Schema({
@@ -18,7 +19,10 @@
     tags: String
   });
   Users = mongoose.model('User', userSchema);
+
 });
+
+mongoose.connect('mongodb://localhost/group16');
 
 
 
