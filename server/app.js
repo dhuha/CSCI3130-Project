@@ -10,18 +10,19 @@ var app = express();
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var db = mongoose.connection;
-
+var Users;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
-    // yay!
+  var userSchema = new Schema({
+  username: String,
+  tags: String
 });
+Users = mongoose.model('User', userSchema);
+  });
 
-var userSchema = new Schema({
-	username: String,
-	tags: String
-});
 
-var userModel = mongoose.model('User', userSchema);
+
+
 
 // Enables CORS
 var enableCORS = function(req, res, next) {
