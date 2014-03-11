@@ -22,7 +22,7 @@
 
 });
 
-mongoose.connect('mongodb://localhost/group16');
+ mongoose.connect('mongodb://localhost/group16');
 
 
 
@@ -54,9 +54,11 @@ app.get('/hello',function(req,res){
 	res.send('hello world');
 });
 
+
+
 app.get('/user/tags',function(req,res){
   console.log('tag request');
-  return  userModel.findOne({ 'username': 'TEST'},'username tags', function(err, u){
+  return  userModel.findOne({username: req.body.username},function(err, u){
     if(!err){
       return res.send(u.tags);	
     }else{
@@ -66,21 +68,20 @@ app.get('/user/tags',function(req,res){
 });
 
 app.post('/user/add',function(req,res){
-	var nUser = new userModel({
-		name: req.body.username,
+	var nUser = new Users({
+		username: req.body.username,
 		tags: req.body.tags
 	});
   nUser.save(function (err) {
   	if (!err){
-     return console.log('new user');
-   }else{
-    return console.log(err);
-  }
-});
-  return res.send(nUser);
+      console.log('new user');
+      res.send(200);
+    };
+
+  });
 });
 
-var server = app.listen(60000,function(){
-	console.log('Listening on port %d, adress %s',server.address().port,server.address().address);
-})
+  var server = app.listen(60000,function(){
+   console.log('Listening on port %d, adress %s',server.address().port,server.address().address);
+ })
 
