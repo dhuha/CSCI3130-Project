@@ -46,7 +46,7 @@ var enableCORS = function(req, res, next) {
 
 // enable CORS!
 app.use(enableCORS);
-app.user(bodyParser());
+app.use(express.bodyParser());
 
 
 
@@ -80,7 +80,7 @@ app.post('/user/add',function(req,res){
   return res.send(nUser);
 });
 
-var server = app.listen(30000,function(){
+var server = app.listen(60000,function(){
 	console.log('Listening on port %d, adress %s',server.address().port,server.address().address);
 })
 
