@@ -9,34 +9,35 @@ $(document).ready( function() {
 	console.log(tags);
 	//hide reccomendations that havent been tagged
 
-	if(tags.indexOf("lowCardio") == -1){
+	if(tags.indexOf("lowCardio") != -1){
 		console.log("removing ")
-		$("#lowCardio").hide();
+		$("recBox").text($("recBox").text() + (low_Cardio() + "\n"));
 	}
 
-	if(tags.indexOf("lowStrength") == -1){
+	if(tags.indexOf("lowStrength") != -1){
 		console.log("removing ")
-		$("#lowStrength").hide();
+		$("recBox").text($("recBox").text() + (low_Strength() + "\n"));
 	}
 
-	if(tags.indexOf("highCardio") == -1){
+	if(tags.indexOf("highCardio") != -1){
 		console.log("removing ")
-		$("#highCardio").hide();
+		$("recBox").text($("recBox").text() + (high_Cardio() + "\n"));
 	}
 
-	if(tags.indexOf("highStrength") == -1){
+	if(tags.indexOf("highStrength") != -1){
 		console.log("removing ")
-		$("#highStrength").hide();
+		$("recBox").text($("recBox").text() + (high_Strength() + "\n"));
 	}
 
-	if(tags.indexOf("lowIntensity") == -1){
+	if(tags.indexOf("lowIntensity") != -1){
 		console.log("removing ")
-		$("#lowIntensity").hide();
+		$("recBox").text($("recBox").text() + (low_Intensity() + "\n"));
+	
 	}
 
-	if(tags.indexOf("highIntensity") == -1){
+	if(tags.indexOf("highIntensity") != -1){
 		console.log("removing ")
-		$("#highIntensity").hide();
+		$("recBox").text($("recBox").text() + (high_Intensity() + "\n"));
 	}
 	function getTags() {
 		 return $.cookie("tags");
