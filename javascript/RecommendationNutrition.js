@@ -115,7 +115,7 @@ var ranNumC = Math.floor(Math.random()*highC.length)+ 0);
 	return highC[ranNumC];
 	
 }
-function high_Strengh(){
+function high_Strength(){
 	var highS = [
 	"Squat workout: Stand under the bar with your feet at about shoulder width apart.Position the bar so that it is resting on the muscles on the top of your back, not on the back of your neck. The bar should feel comfortable. If it doesn't, try adding some padding to the bar.Now take your hands over the back and grip the bar with a wide grip for stability.You should now bend at the knees and straighten your back in preparation to take the weight off the rack.Keeping your back straight and eyes up, push up through the legs and take the weight off the rack.Take a small step back and stabilize yourself.Keeping your eyes facing forward slowly lower your body down. Don't lean forward as you come down. Your buttocks should come out and drop straight down.Squat down until your thighs are parallel with the floor, and then slowly raise your body back up by pushing through your heels.Do not lock the knees out when you stand up, and then repeat the movement.",		  
 	"Dumbell–pullover: Grasp a dumbbell with both hands and position yourself on a flat bench with your shoulder blades resting on the bench.You should be at a 90 degree angle to the bench. Your back shoulder be straight, knees bent at 90 degrees, and feet firmly plated on the floor.Holding the dumbbell in both hands, straighten your arms so that dumbbell is directly overhead. This is the starting position.Bending at the shoulders only and keeping your arms straight, slowly lower the weight down behind your head until the dumbbell reaches the height of the bench.Slowly raise the dumbbell back to the starting position.Repeat for desired reps."];
@@ -150,7 +150,7 @@ function low_Cardio(){
 	return lowC[ranNumC];
 	
 }
-function low_Strengh(){
+function low_Strength(){
 	var lowS = [
 	"Swimming It is suitable for all because it is non-load bearing exercise. With longer swimming, calories will be more reduced.",
 	"Yuga: It is good not only for relaxing or strengthens your muscle. It burns calories with just breathing and posses for certain amount of time. It is appropriate for all levels of fitness. It burns about 200 calories for only half an hour session.",
