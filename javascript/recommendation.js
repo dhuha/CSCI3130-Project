@@ -1,6 +1,7 @@
 //run on document load
 $(document).ready( function() {
 	//get the tags cookie
+	var username = $.cookie('username');
 	var  tags = getTags();
 	if(tags == null){
 		tags ="";
@@ -39,7 +40,9 @@ $(document).ready( function() {
 		$("#highIntensity").hide();
 	}
 	function getTags() {
-		 return $.cookie("tags");
+		 $.get("http://centi.cs.dal.ca:60000/user/tags/"+username,function(data,textStatus,jhxfq){
+		 	return data;	
+		 });
 	}
 
 })
