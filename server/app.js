@@ -56,9 +56,9 @@ app.get('/hello',function(req,res){
 
 
 
-app.get('/user/tags',function(req,res){
+app.get('/user/tags/:id',function(req,res){
   console.log('tag request');
-  return  userModel.findOne({username: req.body.username},function(err, u){
+  return  userModel.findOne({username: req.params.id},function(err, u){
     if(!err){
       return res.send(u.tags);	
     }else{
