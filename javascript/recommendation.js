@@ -1,8 +1,24 @@
+/**
+ * @module recommendaion controls recommendations in the user page
+ * @requires jquery
+ */
+
 //run on document load
+/**
+ * @class ready populate reccomendations on page load
+ */
+
 $(document).ready( function() {
 	//get the tags cookie
 	var user = $.cookie('username');
 	console.log("user: "  + user);
+
+	/**
+ * @method  get sends a get request to the server for the useres tags
+ * @param {String} url server reqest URL
+ * @param {function} callback once the tags have been fetched
+ * @return {Strinf} the tags of the user
+ */
 	$.get(("http://centi.cs.dal.ca:60000/user/tags/"+ user ),function(tags,textStatus,jhxfq){
 		console.log("server returned: " + tags);
 		if(tags == null){

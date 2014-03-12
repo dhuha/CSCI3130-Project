@@ -1,6 +1,18 @@
-//run on document load
+
+/**
+ * @module survey controls the form in the survey page
+ * @requires jquery
+ */
+
+/**
+ * @class ready handle form data
+ */
 $(document).ready( function() {
-	//set onclick listener for submit button
+	
+
+/**
+ * @event click called when submit button is clicked
+ */
 	$(submit).click(function(){
 	// Tag variables for counting occurence.
 		var lcardio =0;		// low cardio  
@@ -14,6 +26,10 @@ $(document).ready( function() {
 		var gender = 0;
 		var age = 0;
 		
+
+		/**
+		 * @method  demographics parses the demographic data from the form and updates tags 
+	 	*/
 		//get the name and gender of user.
 		firstName = $(F_name).val();
 		lastName  = $(L_name).val();
@@ -26,7 +42,10 @@ $(document).ready( function() {
 			lstr += (age - 40)/10;
 		}
 
-		//Special medical condition tags processing.
+		
+		/**
+		 * @method medical parses the medical data from the form and updates tags 
+	 	*/
 		console.log($(diabetes).val());
 		lintensity += $(diabetes).val().indexOf("diabetes") != -1 ?  5 : 0 ;
 		lstr += $(heartD).val().indexOf("heartD") != -1 ? 2 : 0; 
@@ -35,7 +54,10 @@ $(document).ready( function() {
 		lintensity	+= $(emphy).val().indexOf("emphy") != -1 ? 5 : 0;
 		lcardio	+= $(asthma).val().indexOf("asthma") != -1 ? 5 : 0;
 		
-		//process "rate your own fitness" questions
+		
+		/**
+		 * @method  rating parses the self rating data from the form and updates tags 
+	 	*/
 		hintensity += parseInt($('input[name = fit]:checked').val());
 		lintensity += (5 - parseInt($('input[name = fit]:checked').val()));
 
@@ -49,6 +71,10 @@ $(document).ready( function() {
 		lstr += (5 - parseInt($('input[name = fit3]:checked').val()));	 
 
 
+		/**
+		 * @method tagString uses the tag scores from the form data to generate a tag string 
+		 * @return {String} tags a string of tags seperated by commas
+	 	*/
 		//add the tag vars to an array for easier processing
 		var tags = '';
 		var tagArray = new Array();
@@ -94,6 +120,11 @@ $(document).ready( function() {
 		var username = firstName + "_" + lastName ;
 		//Add a new user to the server!
 		console.log("attempting to post");
+
+		/**
+		 * @method post creates a new user and sends to the server to be added to the database
+		 * @return {function} callback changes the page upon successfull user creation 
+	 	*/
 		$.post("http://centi.cs.dal.ca:60000/user/add",{username: username , tags: tags }, function(data, textStatus,jqXHR){
 			//load the next page on successful add 
 			console.log("server returned: " + data);
