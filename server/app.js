@@ -58,7 +58,7 @@ app.get('/hello',function(req,res){
 
 app.get('/user/tags/:id',function(req,res){
   console.log('tag request');
-  return  userModel.findOne({username: req.params.id},function(err, u){
+  return  Users.findOne({username: req.params.id},function(err, u){
     if(!err){
       return res.send(u.tags);	
     }else{
@@ -72,11 +72,12 @@ app.post('/user/add',function(req,res){
 		username: req.body.username,
 		tags: req.body.tags
 	});
+  console.log(nUser);
   nUser.save(function (err) {
   	if (!err){
       console.log('new user');
-      res.send(200);
-    };
+      res.send('user-added');
+    }
 
   });
 });

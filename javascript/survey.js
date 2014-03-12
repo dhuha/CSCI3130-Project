@@ -95,7 +95,9 @@ $(document).ready( function() {
 		//Add a new user to the server!
 		$.post("centi.cs.dal.ca:60000/user/add",{username: username , tags: tags } function(data, textStatus,jqXHR){
 			//load the next page on successful add 
+			console.log("server returned: " + data);
 			$.cookie("username",username,{path:"/", expires:7});
+			
 			var cont = false;
 			cont = window.confirm("Continue?");
 			if(cont == true){
