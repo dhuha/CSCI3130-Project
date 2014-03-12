@@ -98,28 +98,28 @@ var recommendations = ["Salmon. Omega-3 fatty acids. Grill salmon with a yummy r
 
 function high_Intensity(){
 	
-	var highI =  new array[
+	var highI = [
 	"Interval workout. Warm Up: On the treadmill, with the incline set at a challenging angle, power walk at a speed of 3-3.5 for 7 minutes. Keep your elbows up above your heart. Stop, get off the treadmill, and stretch.Sprint: Drop the incline to 0, increase the treadmill speed, and sprint hard for 30 seconds. Aim for 90% of your maximum heart rate. To recover, bring your speed down to 3 and walk for one minute.Squats: Get off the treadmill and squat, with your bottom out to the rear and your legs slightly apart. Then jump from the squatting position into the air, landing in the same squat position as before. Do this for one set of 15 or 20, working your quadriceps. If you’re already in good shape, hold dumbbells by your sides.Overhead Presses: Do 15 or 20 overhead presses with the weights, pushing them straight up and directly over your shoulders.Sprint: Get back on the treadmill and sprint for 30 seconds (no incline) and decrease your speed to 3.0",
 	"Treadmill Workout: Warm up for three minutes at 75% of your 5k pace (10kph should be fine).At minute three increase the gradient to 10%.Continue running for 30 seconds then straddle the treadmill (jump off the belt).Rest for 30 seconds while you increase the speed by 5kph.Jump back on for another 30-second sprint.Repeat this process until you can no longer complete the 30-second set.Allow three minutes' recovery and repeat for desired number of sets (beginners: one, advanced: three)."];
-
-
 
 	var ranNumI = Math.floor(Math.random()*highI.length)+ 0);
 	return highI[ranNumI];
 
 }
 function high__Cardio(){
-	var highC = new array[
+	var highC = [
 	"Bike workout:Cycle at a low resistance for a three-minute warm up at 70-80rpm.At minute three, increase rpm to above 90.Every 30 seconds increase the resistance by one level and maintain an rpm above 90.Continue until you can no longer hold the rpm above 90.Allow three minutes recovery and repeat for desired number of sets (beginners: one, advanced: three).",
 	"Rowing machine workout: Row at a comfortable pace for a three-minute warm up.Set the screen to display calories. At the end of the third minute explode into maximum effort with the aim of burning as many calories as possible in 60 seconds.Ease off for 60 seconds. Then complete another 60-second set.Continue for desired number of sets (beginners: three, advanced: 10)"];
+	
 var ranNumC = Math.floor(Math.random()*highC.length)+ 0);
 	return highC[ranNumC];
 	
 }
 function high_Strengh(){
-	var highS = new array[
+	var highS = [
 	"Squat workout: Stand under the bar with your feet at about shoulder width apart.Position the bar so that it is resting on the muscles on the top of your back, not on the back of your neck. The bar should feel comfortable. If it doesn't, try adding some padding to the bar.Now take your hands over the back and grip the bar with a wide grip for stability.You should now bend at the knees and straighten your back in preparation to take the weight off the rack.Keeping your back straight and eyes up, push up through the legs and take the weight off the rack.Take a small step back and stabilize yourself.Keeping your eyes facing forward slowly lower your body down. Don't lean forward as you come down. Your buttocks should come out and drop straight down.Squat down until your thighs are parallel with the floor, and then slowly raise your body back up by pushing through your heels.Do not lock the knees out when you stand up, and then repeat the movement.",		  
 	"Dumbell–pullover: Grasp a dumbbell with both hands and position yourself on a flat bench with your shoulder blades resting on the bench.You should be at a 90 degree angle to the bench. Your back shoulder be straight, knees bent at 90 degrees, and feet firmly plated on the floor.Holding the dumbbell in both hands, straighten your arms so that dumbbell is directly overhead. This is the starting position.Bending at the shoulders only and keeping your arms straight, slowly lower the weight down behind your head until the dumbbell reaches the height of the bench.Slowly raise the dumbbell back to the starting position.Repeat for desired reps."];
+	
 	var ranNumS = Math.floor(Math.random()*highS.length)+ 0);
 	return highS[ranNumS];
 	
@@ -132,7 +132,7 @@ function high_Strengh(){
 
 function low_Intensity(){
 
-	var lowI = new array[
+	var lowI = [
 	"Roller Chair Workout:The only tool you need is just a chair with wheels.Listen to music (optional) and try to move your legs or arms or use both at same time while you are setting on the chair. Use one minute as a start point and then try to rise the minutes you exercise.", 
 	"Bed Dancing/Chair Dancing/Ball Dancing:Use a bed, chair or ball as an area to exercise and play music. Start dancing using different movements with your arms and feet, move your hips up and down or in a movement of figure 8. Try some wrist or ankle weights. Repeated exercise would improve your body strength."];
 	
@@ -141,7 +141,7 @@ function low_Intensity(){
 }
 
 function low_Cardio(){
-	var lowC = new array[
+	var lowC = [
 	"Bed Dancing/Chair Dancing/Ball Dancing: Use a bed, chair or ball as an area to exercise and play music. Start dancing using different movements with your arms and feet, move your hips up and down or in a movement of figure 8. Try some wrist or ankle weights. Repeated exercise would improve your body strength.",
 	"Aerobic and Resistance Cleaning: Tool you need is just a vacuum or sweeper. The more heavy the vacuum is, the more strength needed to push or pull. Apply cleaning a room per day using the vacuum. If you suffer from walking disability, the sweeper will act as a supporter. In the beginning of practicing the exercise, you may find it is difficult for one room, but repeated exercise would help you to continue.",
 	"Water workout: Practicing exercise in the water is suitable for beginners in fitness or who just recovered from injuries. You can exercise in the water from a full aqua aerobic session to walking on underwater. If you wonder how the water exercise can help in terms of burning calories, it is important to note that the more depth of the water, the more calories burn because of the demand energy to push your body."];
@@ -151,7 +151,7 @@ function low_Cardio(){
 	
 }
 function low_Strengh(){
-	var lowS = new array[
+	var lowS = [
 	"Swimming It is suitable for all because it is non-load bearing exercise. With longer swimming, calories will be more reduced.",
 	"Yuga: It is good not only for relaxing or strengthens your muscle. It burns calories with just breathing and posses for certain amount of time. It is appropriate for all levels of fitness. It burns about 200 calories for only half an hour session.",
 	"Walking: it is a simplest and affordable way for all people to burn calories. If you are not used to walk for long distances, start with a short amount of time and limit your speed. The number of calories burnt depends on your size, speed and distance you walk. With walking you can avoid joint jarring problems if you have one, which might occur when you run."];
