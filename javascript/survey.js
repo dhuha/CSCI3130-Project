@@ -91,19 +91,17 @@ $(document).ready( function() {
 			}
 			tagArray[max] = -1;
 		}
-		
-		//start a cookie with the tags and the username. 
-		$.cookie("tags",tags,{ path : '/' , expires: 7});
-		$.cookie("user", firstName, { path: '/', expires: 7 });
-
-		//load the next page.
-
-		var cont = false;
-		cont = window.confirm("Continue?");
-		if(cont == true){
-			window.location = "userpage.html"
-			console.log("changing page")
-		}
+		var username = firstName + "_" + lastName ;
+		//Add a new user to the server!
+		$.post("centi.cs.dal.ca:60000/user/add",{username: username , tags: tags } function(data, textStatus,jqXHR){
+			//load the next page on successful add 
+			var cont = false;
+			cont = window.confirm("Continue?");
+			if(cont == true){
+				window.location = "userpage.html";
+				console.log("changing page");
+			}
+		});
 	})
 }) 
 
