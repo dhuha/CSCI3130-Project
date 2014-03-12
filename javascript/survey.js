@@ -1,17 +1,20 @@
 
 /**
- * @module survey controls the form in the survey page
+ * controls the form in the survey page
+ * @module survey 
  * @requires jquery
  */
 
 /**
- * @class ready handle form data
+ * handle form data on page load
+ * @class ready 
  */
 $(document).ready( function() {
 	
 
 /**
- * @event click called when submit button is clicked
+ * called when submit button is clicked
+ * @event click 
  */
 	$(submit).click(function(){
 	// Tag variables for counting occurence.
@@ -28,8 +31,9 @@ $(document).ready( function() {
 		
 
 		/**
-		 * @method  demographics parses the demographic data from the form and updates tags 
-	 	*/
+		 * parses the demographic data from the form and updates tags 
+		 * @method demographics 
+	 	 */
 		//get the name and gender of user.
 		firstName = $(F_name).val();
 		lastName  = $(L_name).val();
@@ -44,8 +48,9 @@ $(document).ready( function() {
 
 		
 		/**
-		 * @method medical parses the medical data from the form and updates tags 
-	 	*/
+		 * parses the medical data from the form and updates tags 
+		 * @method medical 
+	 	 */
 		console.log($(diabetes).val());
 		lintensity += $(diabetes).val().indexOf("diabetes") != -1 ?  5 : 0 ;
 		lstr += $(heartD).val().indexOf("heartD") != -1 ? 2 : 0; 
@@ -56,8 +61,9 @@ $(document).ready( function() {
 		
 		
 		/**
-		 * @method  rating parses the self rating data from the form and updates tags 
-	 	*/
+		 * parses the self rating data from the form and updates tags 
+		 * @method  rating 
+	 	 */
 		hintensity += parseInt($('input[name = fit]:checked').val());
 		lintensity += (5 - parseInt($('input[name = fit]:checked').val()));
 
@@ -72,9 +78,11 @@ $(document).ready( function() {
 
 
 		/**
-		 * @method tagString uses the tag scores from the form data to generate a tag string 
+		 * uses the tag scores from the form data to generate a tag string 
+		 * @method tagString 
 		 * @return {String} tags a string of tags seperated by commas
-	 	*/
+	   */
+
 		//add the tag vars to an array for easier processing
 		var tags = '';
 		var tagArray = new Array();
@@ -122,7 +130,8 @@ $(document).ready( function() {
 		console.log("attempting to post");
 
 		/**
-		 * @method post creates a new user and sends to the server to be added to the database
+		 * creates a new user and sends to the server to be added to the database
+		 * @method post 
 		 * @return {function} callback changes the page upon successfull user creation 
 	 	*/
 		$.post("http://centi.cs.dal.ca:60000/user/add",{username: username , tags: tags }, function(data, textStatus,jqXHR){

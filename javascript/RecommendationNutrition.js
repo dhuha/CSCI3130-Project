@@ -1,11 +1,12 @@
 /**
-*
-*@class recommendationHelper contains functions to get reccomendations from tags
+*contains functions to get reccomendations from tags
+*@class recommendationHelper 
 *
 */
 
 /**
- * @method lowStrength returns a reccomendation from the low strength tag
+ * returns a reccomendation from the low strength tag
+ * @method lowStrengthNutrition 
  * @return {String} the reccomendation
  */
 function lowStrengthNutrition(){
@@ -56,7 +57,8 @@ function lowStrengthNutrition(){
 
 
 /**
- * @method lowCardio returns a reccomendation from the low cardio tag
+ * returns a reccomendation from the low cardio tag
+ * @method lowCardioNutrition 
  * @return {String} the reccomendation
  */
 function lowCardioNutrition(){
@@ -109,7 +111,8 @@ var recommendations = ["Salmon. Omega-3 fatty acids. Grill salmon with a yummy r
 
 
 /**
- * @method highIntensity returns a reccomendation from the high intensity tag
+ * returns a reccomendation from the high intensity tag
+ * @method highIntensity 
  * @return {String} the reccomendation
  */
 function highIntensity(){
@@ -124,7 +127,8 @@ function highIntensity(){
 }
 
 /**
- * @method highCardio returns a reccomendation from the high cardio tag
+ * returns a reccomendation from the high cardio tag
+ * @method highCardio 
  * @return {String} the reccomendation
  */
 function highCardio(){
@@ -139,7 +143,8 @@ var ranNumC = Math.floor(Math.random()*highC.length);
 
 
 /**
- * @method highStrength returns a reccomendation from the high strength tag
+ * returns a reccomendation from the high strength tag
+ * @method highStrength 
  * @return {String} the reccomendation
  */
 function highStrength(){
@@ -154,7 +159,8 @@ function highStrength(){
 
 
 /**
- * @method lowIntensity returns a reccomendation from the low intensity tag
+ * returns a reccomendation from the low intensity tag
+ * @method lowIntensity 
  * @return {String} the reccomendation
  */
 function lowIntensity(){
@@ -169,7 +175,8 @@ function lowIntensity(){
 
 
 /**
- * @method lowCardio returns a reccomendation from the low cardio tag
+ * returns a reccomendation from the low cardio tag
+ * @method lowCardio 
  * @return {String} the reccomendation
  */
 function lowCardio(){
@@ -184,7 +191,8 @@ function lowCardio(){
 }
 
 /**
- * @method lowStrength returns a reccomendation from the low strength tag
+ * returns a reccomendation from the low strength tag
+ * @method lowStrength 
  * @return {String} the reccomendation
  */
 function lowStrength(){
