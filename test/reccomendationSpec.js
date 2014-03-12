@@ -19,7 +19,7 @@ describe("Reccomendations", function() {
     it('should show reccomendations',function(){
 
     });
-    it('should show graph'function(){
+    it('should show graph',function(){
 
     });
 })          

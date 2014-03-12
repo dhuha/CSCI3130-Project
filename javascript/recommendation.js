@@ -8,36 +8,42 @@ $(document).ready( function() {
 
 	console.log(tags);
 	//hide reccomendations that havent been tagged
-
-	if(tags.indexOf("lowCardio") != -1){
-		console.log("removing ")
-		$("recBox").text($("recBox").text() + (low_Cardio() + "\n"));
+	console.log(lowCardio());
+	if(tags.indexOf("lowCardio") != -1){		
+		var curr = $("#recBox").html();
+		console.log("showing lowCardio: " + curr )
+		$("#recBox").html( curr + (lowCardio() + "<br/><br/>"));
 	}
 
 	if(tags.indexOf("lowStrength") != -1){
-		console.log("removing ")
-		$("recBox").text($("recBox").text() + (low_Strength() + "\n"));
+		console.log("showing lowStrength")
+		var curr = $("#recBox").html();
+		$("#recBox").html( curr + (lowStrength() + "<br/><br/>"));
 	}
 
 	if(tags.indexOf("highCardio") != -1){
-		console.log("removing ")
-		$("recBox").text($("recBox").text() + (high_Cardio() + "\n"));
+		console.log("showing highCardio");
+		var curr = $("#recBox").html();
+		$("#recBox").html( curr + (highCardio() + "<br/><br/>"));
 	}
 
 	if(tags.indexOf("highStrength") != -1){
-		console.log("removing ")
-		$("recBox").text($("recBox").text() + (high_Strength() + "\n"));
+		console.log("showing highStrength");
+		var curr = $("#recBox").html();
+		$("#recBox").html( curr + (highStrength() + "<br/><br/>"));
 	}
 
 	if(tags.indexOf("lowIntensity") != -1){
-		console.log("removing ")
-		$("recBox").text($("recBox").text() + (low_Intensity() + "\n"));
+		console.log("showing lowIntensity")
+		var curr = $("#recBox").html();
+		$("#recBox").html( curr + (lowIntensity() + "<br/><br/>"));
 	
 	}
 
 	if(tags.indexOf("highIntensity") != -1){
-		console.log("removing ")
-		$("recBox").text($("recBox").text() + (high_Intensity() + "\n"));
+		console.log("showing highIntensity");
+		var curr = $("#recBox").html();
+		$("#recBox").html( curr + (highIntensity() + "<br/><br/>"));
 	}
 	function getTags() {
 		 return $.cookie("tags");
