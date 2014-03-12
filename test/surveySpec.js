@@ -59,12 +59,12 @@ describe("form", function() {
     })
     it('should get a response from the server',function(){
         var hello;
-        $.get("centi.cs.dal.ca:30000/hello" ,
+        $.get("http://centi.cs.dal.ca:30000/hello" ,
             function(data, textStatus, jqXHR){
                 console.log(data);
-                hello = data;
+                expect(data).toEqual("hello world");
             });
-        expect(hello).toEqual("hello world");
+        
     });
     it('should add a new user to the server',function(){
         expect(false).toEqual(true);
