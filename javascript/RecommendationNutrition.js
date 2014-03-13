@@ -1,4 +1,15 @@
-function lowStrength(){
+/**
+*contains functions to get reccomendations from tags
+*@class recommendationHelper 
+*
+*/
+
+/**
+ * returns a reccomendation from the low strength tag
+ * @method lowStrengthNutrition 
+ * @return {String} the reccomendation
+ */
+function lowStrengthNutrition(){
 	var recommendations = ["Whole Eggs. Cheap & rich source of protein: 7g/egg. The yolk contains most nutrients: half the protein, vitamins A/D/E and cholesterol to naturally increase your testosterone levels"
 
 	,"Fish Oil. Reduces inflammation (joints/skin), lowers body fat and increases testosterone levels. You need 9000mg EPA/DHA per day. Since youâ€™ll probably struggle to get that from eating fatty fish, consider a fish oil supplement."
@@ -45,7 +56,12 @@ function lowStrength(){
 
 
 
-function lowCardio(){
+/**
+ * returns a reccomendation from the low cardio tag
+ * @method lowCardioNutrition 
+ * @return {String} the reccomendation
+ */
+function lowCardioNutrition(){
 var recommendations = ["Salmon. Omega-3 fatty acids. Grill salmon with a yummy rub or marinade. Save a chunk to chop for a pasta or salad later on.",
 
 "Flaxseed (ground). Omega-3 fatty acids; fiber, phytoestrogens.Ground flaxseed hides easily in all sorts of foods -- yogurt parfaits, morning cereal, homemade muffins, or cookies.",
@@ -91,11 +107,14 @@ var recommendations = ["Salmon. Omega-3 fatty acids. Grill salmon with a yummy r
 	var randomNumber = Math.floor((Math.random()* arrayLen));
 	return recommendations[randomNumber];	
 }
+
+
+
 /**
-* fuction high_Intensity(), fuction high_Cardio(), fuction high_Strengh will return a recommendations on low intensiy,cardio and strengh.
-*/
-
-
+ * returns a reccomendation from the high intensity tag
+ * @method highIntensity 
+ * @return {String} the reccomendation
+ */
 function highIntensity(){
 	
 	var highI = [
@@ -106,6 +125,12 @@ function highIntensity(){
 	return highI[ranNumI];
 
 }
+
+/**
+ * returns a reccomendation from the high cardio tag
+ * @method highCardio 
+ * @return {String} the reccomendation
+ */
 function highCardio(){
 	var highC = [
 	"Bike workout:Cycle at a low resistance for a three-minute warm up at 70-80rpm.At minute three, increase rpm to above 90.Every 30 seconds increase the resistance by one level and maintain an rpm above 90.Continue until you can no longer hold the rpm above 90.Allow three minutes recovery and repeat for desired number of sets (beginners: one, advanced: three).",
@@ -115,6 +140,13 @@ var ranNumC = Math.floor(Math.random()*highC.length);
 	return highC[ranNumC];
 	
 }
+
+
+/**
+ * returns a reccomendation from the high strength tag
+ * @method highStrength 
+ * @return {String} the reccomendation
+ */
 function highStrength(){
 	var highS = [
 	"Squat workout: Stand under the bar with your feet at about shoulder width apart.Position the bar so that it is resting on the muscles on the top of your back, not on the back of your neck. The bar should feel comfortable. If it doesn't, try adding some padding to the bar.Now take your hands over the back and grip the bar with a wide grip for stability.You should now bend at the knees and straighten your back in preparation to take the weight off the rack.Keeping your back straight and eyes up, push up through the legs and take the weight off the rack.Take a small step back and stabilize yourself.Keeping your eyes facing forward slowly lower your body down. Don't lean forward as you come down. Your buttocks should come out and drop straight down.Squat down until your thighs are parallel with the floor, and then slowly raise your body back up by pushing through your heels.Do not lock the knees out when you stand up, and then repeat the movement.",		  
@@ -127,9 +159,10 @@ function highStrength(){
 
 
 /**
-* fuction low_Intensity(),fuction low_Cardio(), fuction low_Strengh will return a recommendations on low intensiy,cardio and strengh.
-*/
-
+ * returns a reccomendation from the low intensity tag
+ * @method lowIntensity 
+ * @return {String} the reccomendation
+ */
 function lowIntensity(){
 
 	var lowI = [
@@ -140,6 +173,12 @@ function lowIntensity(){
 	return lowI[ranNumI];
 }
 
+
+/**
+ * returns a reccomendation from the low cardio tag
+ * @method lowCardio 
+ * @return {String} the reccomendation
+ */
 function lowCardio(){
 	var lowC = [
 	"Bed Dancing/Chair Dancing/Ball Dancing: Use a bed, chair or ball as an area to exercise and play music. Start dancing using different movements with your arms and feet, move your hips up and down or in a movement of figure 8. Try some wrist or ankle weights. Repeated exercise would improve your body strength.",
@@ -150,6 +189,12 @@ function lowCardio(){
 	return lowC[ranNumC];
 	
 }
+
+/**
+ * returns a reccomendation from the low strength tag
+ * @method lowStrength 
+ * @return {String} the reccomendation
+ */
 function lowStrength(){
 	var lowS = [
 	"Swimming It is suitable for all because it is non-load bearing exercise. With longer swimming, calories will be more reduced.",
