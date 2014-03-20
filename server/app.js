@@ -10,14 +10,24 @@
  var mongoose = require('mongoose');
  var Schema = mongoose.Schema;
  var db = mongoose.connection;
+ var passport = require('passport');
  var Users;
+ app.use(express.session({ secret: 'group16_private' })); // session secret
+ app.use(passport.initialize());
+ app.use(passport.session()); // persistent login sessions
+ app.use(flash()); // use connect-flash for flash messages stored in session
 
  db.on('error', console.error.bind(console, 'connection error:'));
  db.once('open', function callback () {
   var userSchema = new Schema({
     username: String,
-    tags: String
+    tags: String,
+    handle: String,
+    password: String
   });
+  userSchema.methods.validPassword = function(password) {
+    return password == this.password;
+  };
   Users = mongoose.model('User', userSchema);
 
 });
@@ -81,8 +91,10 @@ app.post('/user/add',function(req,res){
 
   });
 });
+app.post('/login', passport.authenticate('local', { successRedirect: '/',
+  failureRedirect: '/login' }));
 
-  var server = app.listen(60000,function(){
-   console.log('Listening on port %d, adress %s',server.address().port,server.address().address);
- })
+var server = app.listen(60000,function(){
+ console.log('Listening on port %d, adress %s',server.address().port,server.address().address);
+})
 
