@@ -1,0 +1,208 @@
+abercrombie, lascelles
+adams, sarah fuller flower
+agatha_christie
+agustini, delmira
+aiken, conrad
+akhmatova, anna
+alcott, louisa may
+aldington, richard
+alexander pushkin
+alger, julie hill
+alighieri, dante
+alistair maclean
+allingham, william
+amichai, yehuda
+amis, kingsley
+ammons, a r
+andrew neiderman
+angelou, maya
+ann m. martin
+anne golon
+anne rice
+apollinaire, guillaume
+arnold, matthew
+arp, jean
+arthur hailey
+ashbery, john
+astrid lindgren
+auden, wystan hugh (w h)
+austen, jane
+austin, alfred
+bai , li
+baraka, imamu amiri
+barbara cartland
+basho, matsuo
+beatrix potter
+bishop , elizabeth
+blake, william
+borges, jorge luis
+bronte, anne
+brooks, gwendolyn
+browning, elizabeth barrett
+browning, robert
+burns, robert
+byron, george (lord)
+c. s. lewis
+cao xueqin
+carroll, lewis
+catherine cookson
+cavafy, constantine p
+chaucer, geoffrey
+cisneros, sandra
+clifton, lucille
+clive cussler
+collins, billy
+corín tellado
+cummings , edward estlin (e e)
+dan brown
+danielle steel
+david baldacci
+dean koontz
+debbie macomber
+denise robins
+dickinson, emily
+donne, john
+douglas, keith
+dr. seuss
+duffy, carol ann
+edgar rice burroughs
+edgar wallace
+eiji yoshikawa
+eleanor hibbert
+emerson, ralph waldo
+enid blyton
+erle stanley gardner
+erskine caldwell
+evan hunter
+frank g. slaughter
+frost, robert
+frédéric dard
+fu, du
+georges simenon
+gilbert patten
+ginsberg, allen
+giovanni, nikki
+gérard de villiers
+hardy, thomas
+harold robbins
+hermann hesse
+herrick, robert
+holmes, oliver wendell
+homer,
+horatio alger, jr.
+hughes, langston
+ian fleming
+irving wallace
+j. k. rowling
+j. r. r. tolkien
+jackie collins
+james michener
+james patterson
+janet dailey
+jeffrey archer
+jin yong
+jirō akagawa
+john creasey
+john grisham
+jonson, ben
+karl may
+keats, john
+ken follett
+kipling, rudyard
+kyotaro nishimura
+leo tolstoy
+lewis carroll
+lewis, c s
+longfellow, henry wadsworth
+louis l'amour
+mary higgins clark
+michael crichton
+mickey spillane
+neruda, pablo
+noonuccal, oodgeroo
+nora roberts
+norman bridwell
+patricia cornwell
+paulo coelho
+paz, octavio
+penny jordan
+plath, sylvia
+poe, edgar allan
+prelutsky, jack
+pushkin, alexander
+r. l. stine
+raleigh, sir walter
+rex stout
+richard scarry
+roald dahl
+robert ludlum
+robin cook
+roger hargreaves
+rumi, jalal ad-din muhammad
+ryōtarō shiba
+sandburg, carl
+sappho,
+seiichi morimura
+shakespeare, william
+shelley, percy bysshe
+sidney sheldon
+silverstein, shel
+soto, gary
+stan and jan berenstain
+stephen king
+stephenie meyer
+stevens, wallace
+stevenson, robert louis
+swift, jonathan
+tagore, rabindranath
+teasdale, sara
+tennyson, alfred lord
+thomas, dylan
+thoreau, henry david
+twain, mark
+vallejo, cesar
+viorst, judith
+walker, alice
+warren, mercy otis
+wei, wang
+wheatley, phillis
+whitman, walt
+whittier, john greenleaf
+wilbur smith
+wilde, oscar
+william_shakespeare
+williams, william carlos (wcw)
+wilmot, john
+wordsworth, william
+wright, james
+wyatt, sir thomas
+yasuo uchida
+yeats, william butler
+zane grey
+zaran, lisa
+biography
+brothers_grimm
+de la mare, walter
+drama
+essay
+fairytales
+fiction
+flowers_in_the_attic
+humanities
+journals
+linguistics
+literary
+literature
+mythology
+novel
+novels
+philip_roth
+philosophy
+poet
+poetry
+resources
+socialstudies
+stephen_king
+tales
+writer
+writers
