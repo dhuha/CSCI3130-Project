@@ -1,0 +1,9 @@
+{
+  "name": "group16",
+  "version": "0.2.0",
+  "dependencies": {
+    "grunt": "*",
+    "jasmine-node": "*",
+    "yuidocjs":"*"
+  }
+}

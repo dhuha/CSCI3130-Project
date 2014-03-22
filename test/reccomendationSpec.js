@@ -9,7 +9,7 @@ describe("Reccomendations", function() {
     });
     it('should get a response from the server',function(){
         var hello;
-        $.get("http://centi.cs.dal.ca:30000/hello" ,
+        $.get("http://centi.cs.dal.ca:60000/hello" ,
             function(data, textStatus, jqXHR){
                 console.log(data);
                 return expect(data).toEqual("hello world");
@@ -19,7 +19,7 @@ describe("Reccomendations", function() {
     it('should show reccomendations',function(){
 
     });
-    it('should show graph'function(){
+    it('should show graph',function(){
 
     });
 })          

@@ -1,0 +1,599 @@
+{
+    "project": {},
+    "files": {
+        "javascript/RecommendationNutrition.js": {
+            "name": "javascript/RecommendationNutrition.js",
+            "modules": {},
+            "classes": {
+                "recommendationHelper": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript/cookie.js": {
+            "name": "javascript/cookie.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript/recommendation.js": {
+            "name": "javascript/recommendation.js",
+            "modules": {
+                "recommendaion": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript/survey.js": {
+            "name": "javascript/survey.js",
+            "modules": {
+                "survey": 1
+            },
+            "classes": {
+                "ready": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/boot.js": {
+            "name": "lib/boot.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "recommendaion": {
+            "name": "recommendaion",
+            "submodules": {},
+            "classes": {
+                "recommendationHelper": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "javascript/RecommendationNutrition.js",
+            "line": 1,
+            "description": "controls recommendations in the user page",
+            "requires": [
+                "jquery"
+            ]
+        },
+        "survey": {
+            "name": "survey",
+            "submodules": {},
+            "classes": {
+                "ready": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "javascript/survey.js",
+            "line": 8,
+            "description": "controls the form in the survey page",
+            "requires": [
+                "jquery"
+            ]
+        }
+    },
+    "classes": {
+        "recommendationHelper": {
+            "name": "recommendationHelper",
+            "shortname": "recommendationHelper",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "recommendaion",
+            "file": "javascript/RecommendationNutrition.js",
+            "line": 1,
+            "description": "contains functions to get reccomendations from tags"
+        },
+        "ready": {
+            "name": "ready",
+            "shortname": "ready",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "survey",
+            "namespace": "",
+            "file": "javascript/survey.js",
+            "line": 8,
+            "description": "handle form data on page load"
+        }
+    },
+    "classitems": [
+        {
+            "file": "javascript/RecommendationNutrition.js",
+            "line": 7,
+            "description": "returns a reccomendation from the low strength tag",
+            "itemtype": "method",
+            "name": "lowStrengthNutrition",
+            "return": {
+                "description": "the reccomendation",
+                "type": "String"
+            },
+            "class": "recommendationHelper"
+        },
+        {
+            "file": "javascript/RecommendationNutrition.js",
+            "line": 59,
+            "description": "returns a reccomendation from the low cardio tag",
+            "itemtype": "method",
+            "name": "lowCardioNutrition",
+            "return": {
+                "description": "the reccomendation",
+                "type": "String"
+            },
+            "class": "recommendationHelper"
+        },
+        {
+            "file": "javascript/RecommendationNutrition.js",
+            "line": 113,
+            "description": "returns a reccomendation from the high intensity tag",
+            "itemtype": "method",
+            "name": "highIntensity",
+            "return": {
+                "description": "the reccomendation",
+                "type": "String"
+            },
+            "class": "recommendationHelper"
+        },
+        {
+            "file": "javascript/RecommendationNutrition.js",
+            "line": 129,
+            "description": "returns a reccomendation from the high cardio tag",
+            "itemtype": "method",
+            "name": "highCardio",
+            "return": {
+                "description": "the reccomendation",
+                "type": "String"
+            },
+            "class": "recommendationHelper"
+        },
+        {
+            "file": "javascript/RecommendationNutrition.js",
+            "line": 145,
+            "description": "returns a reccomendation from the high strength tag",
+            "itemtype": "method",
+            "name": "highStrength",
+            "return": {
+                "description": "the reccomendation",
+                "type": "String"
+            },
+            "class": "recommendationHelper"
+        },
+        {
+            "file": "javascript/RecommendationNutrition.js",
+            "line": 161,
+            "description": "returns a reccomendation from the low intensity tag",
+            "itemtype": "method",
+            "name": "lowIntensity",
+            "return": {
+                "description": "the reccomendation",
+                "type": "String"
+            },
+            "class": "recommendationHelper"
+        },
+        {
+            "file": "javascript/RecommendationNutrition.js",
+            "line": 177,
+            "description": "returns a reccomendation from the low cardio tag",
+            "itemtype": "method",
+            "name": "lowCardio",
+            "return": {
+                "description": "the reccomendation",
+                "type": "String"
+            },
+            "class": "recommendationHelper"
+        },
+        {
+            "file": "javascript/RecommendationNutrition.js",
+            "line": 193,
+            "description": "returns a reccomendation from the low strength tag",
+            "itemtype": "method",
+            "name": "lowStrength",
+            "return": {
+                "description": "the reccomendation",
+                "type": "String"
+            },
+            "class": "recommendationHelper"
+        },
+        {
+            "file": "javascript/cookie.js",
+            "line": 1,
+            "description": "Cookie plugin\n\nCopyright (c) 2006 Klaus Hartl (stilbuero.de)\nDual licensed under the MIT and GPL licenses:\nhttp://www.opensource.org/licenses/mit-license.php\nhttp://www.gnu.org/licenses/gpl.html",
+            "class": "ready"
+        },
+        {
+            "file": "javascript/cookie.js",
+            "line": 11,
+            "description": "Create a cookie with the given name and value and other optional parameters.",
+            "example": [
+                " $.cookie('the_cookie', 'the_value');",
+                " $.cookie('the_cookie', 'the_value', { expires: 7, path: '/', domain: 'jquery.com', secure: true });",
+                " $.cookie('the_cookie', 'the_value');",
+                " $.cookie('the_cookie', null);"
+            ],
+            "desc": "Delete a cookie by passing null as value. Keep in mind that you have to use the same path and domain\n      used when the cookie was set.",
+            "params": [
+                {
+                    "name": "String",
+                    "description": "name The name of the cookie."
+                },
+                {
+                    "name": "String",
+                    "description": "value The value of the cookie."
+                },
+                {
+                    "name": "Object",
+                    "description": "options An object literal containing key/value pairs to provide optional cookie attributes."
+                }
+            ],
+            "option": "Boolean secure If true, the secure attribute of the cookie will be set and the cookie transmission will\n                       require a secure protocol (like HTTPS).",
+            "type": "undefined",
+            "name": "$.cookie",
+            "cat": "Plugins/Cookie",
+            "author": "Klaus Hartl/klaus.hartl@stilbuero.de",
+            "class": "ready"
+        },
+        {
+            "file": "javascript/cookie.js",
+            "line": 42,
+            "description": "Get the value of a cookie with the given name.",
+            "example": [
+                " $.cookie('the_cookie');"
+            ],
+            "desc": "Get the value of a cookie.",
+            "params": [
+                {
+                    "name": "String",
+                    "description": "name The name of the cookie."
+                }
+            ],
+            "return": {
+                "description": "The value of the cookie."
+            },
+            "type": "String",
+            "name": "$.cookie",
+            "cat": "Plugins/Cookie",
+            "author": "Klaus Hartl/klaus.hartl@stilbuero.de",
+            "class": "ready"
+        },
+        {
+            "file": "javascript/recommendation.js",
+            "line": 18,
+            "description": "sends a get request to the server for the useres tags",
+            "itemtype": "method",
+            "name": "get",
+            "params": [
+                {
+                    "name": "url",
+                    "description": "server reqest URL",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "once the tags have been fetched",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "the tags of the user",
+                "type": "Strinf"
+            },
+            "class": "ready",
+            "module": "recommendaion"
+        },
+        {
+            "file": "javascript/survey.js",
+            "line": 15,
+            "description": "called when submit button is clicked",
+            "itemtype": "event",
+            "name": "click",
+            "class": "ready",
+            "module": "survey"
+        },
+        {
+            "file": "javascript/survey.js",
+            "line": 33,
+            "description": "parses the demographic data from the form and updates tags",
+            "itemtype": "method",
+            "name": "demographics",
+            "class": "ready",
+            "module": "survey"
+        },
+        {
+            "file": "javascript/survey.js",
+            "line": 50,
+            "description": "parses the medical data from the form and updates tags",
+            "itemtype": "method",
+            "name": "medical",
+            "class": "ready",
+            "module": "survey"
+        },
+        {
+            "file": "javascript/survey.js",
+            "line": 63,
+            "description": "parses the self rating data from the form and updates tags",
+            "itemtype": "method",
+            "name": "rating",
+            "class": "ready",
+            "module": "survey"
+        },
+        {
+            "file": "javascript/survey.js",
+            "line": 80,
+            "description": "uses the tag scores from the form data to generate a tag string",
+            "itemtype": "method",
+            "name": "tagString",
+            "return": {
+                "description": "tags a string of tags seperated by commas",
+                "type": "String"
+            },
+            "class": "ready",
+            "module": "survey"
+        },
+        {
+            "file": "javascript/survey.js",
+            "line": 132,
+            "description": "creates a new user and sends to the server to be added to the database",
+            "itemtype": "method",
+            "name": "post",
+            "return": {
+                "description": "callback changes the page upon successfull user creation",
+                "type": "Function"
+            },
+            "class": "ready",
+            "module": "survey"
+        },
+        {
+            "file": "lib/boot.js",
+            "line": 1,
+            "description": "Starting with version 2.0, this file \"boots\" Jasmine, performing all of the necessary initialization before executing the loaded environment and all of a project's specs. This file should be loaded after `jasmine.js`, but before any project source files or spec files are loaded. Thus this file can also be used to customize Jasmine for a project.\n\nIf a project is using Jasmine via the standalone distribution, this file can be customized directly. If a project is using Jasmine via the [Ruby gem][jasmine-gem], this file can be copied into the support directory via `jasmine copy_boot_js`. Other environments (e.g., Python) will have different mechanisms.\n\nThe location of `boot.js` can be specified and/or overridden in `jasmine.yml`.\n\n[jasmine-gem]: http://github.com/pivotal/jasmine-gem",
+            "class": "",
+            "module": "survey"
+        },
+        {
+            "file": "lib/boot.js",
+            "line": 13,
+            "description": "## Require &amp; Instantiate\n\nRequire Jasmine's core files. Specifically, this requires and attaches all of Jasmine's code to the `jasmine` reference.",
+            "class": "",
+            "module": "survey"
+        },
+        {
+            "file": "lib/boot.js",
+            "line": 20,
+            "description": "Since this is being run in a browser and the results should populate to an HTML page, require the HTML-specific Jasmine code, injecting the same reference.",
+            "class": "",
+            "module": "survey"
+        },
+        {
+            "file": "lib/boot.js",
+            "line": 25,
+            "description": "Create the Jasmine environment. This is used to run all specs in a project.",
+            "class": "",
+            "module": "survey"
+        },
+        {
+            "file": "lib/boot.js",
+            "line": 30,
+            "description": "## The Global Interface\n\nBuild up the functions that will be exposed as the Jasmine public interface. A project can customize, rename or alias any of these functions as desired, provided the implementation remains unchanged.",
+            "class": "",
+            "module": "survey"
+        },
+        {
+            "file": "lib/boot.js",
+            "line": 77,
+            "description": "Add all of the Jasmine global/public interface to the proper global, so a project can use the public interface directly. For example, calling `describe` in specs instead of `jasmine.getEnv().describe`.",
+            "class": "",
+            "module": "survey"
+        },
+        {
+            "file": "lib/boot.js",
+            "line": 86,
+            "description": "Expose the interface for adding custom equality testers.",
+            "class": "",
+            "module": "survey"
+        },
+        {
+            "file": "lib/boot.js",
+            "line": 93,
+            "description": "Expose the interface for adding custom expectation matchers",
+            "class": "",
+            "module": "survey"
+        },
+        {
+            "file": "lib/boot.js",
+            "line": 100,
+            "description": "Expose the mock interface for the JavaScript timeout functions",
+            "class": "",
+            "module": "survey"
+        },
+        {
+            "file": "lib/boot.js",
+            "line": 107,
+            "description": "## Runner Parameters\n\nMore browser specific code - wrap the query string in an object and to allow for getting/setting parameters from the runner user interface.",
+            "class": "",
+            "module": "survey"
+        },
+        {
+            "file": "lib/boot.js",
+            "line": 120,
+            "description": "## Reporters\nThe `HtmlReporter` builds all of the HTML UI for the runner page. This reporter paints the dots, stars, and x's for specs, as well as all spec names and all failures (if any).",
+            "class": "",
+            "module": "survey"
+        },
+        {
+            "file": "lib/boot.js",
+            "line": 133,
+            "description": "The `jsApiReporter` also receives spec results, and is used by any environment that needs to extract the results  from JavaScript.",
+            "class": "",
+            "module": "survey"
+        },
+        {
+            "file": "lib/boot.js",
+            "line": 139,
+            "description": "Filter which specs will be run by matching the start of the full name against the `spec` query param.",
+            "class": "",
+            "module": "survey"
+        },
+        {
+            "file": "lib/boot.js",
+            "line": 150,
+            "description": "Setting up timing functions to be able to be overridden. Certain browsers (Safari, IE 8, phantomjs) require this hack.",
+            "class": "",
+            "module": "survey"
+        },
+        {
+            "file": "lib/boot.js",
+            "line": 158,
+            "description": "## Execution\n\nReplace the browser window's `onload`, ensure it's called, and then run all of the loaded specs. This includes initializing the `HtmlReporter` instance and then executing the loaded Jasmine environment. All of this will happen after all of the specs are loaded.",
+            "class": "",
+            "module": "survey"
+        },
+        {
+            "file": "lib/boot.js",
+            "line": 173,
+            "description": "Helper function for readability above.",
+            "class": "",
+            "module": "survey"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "unknown tag: desc",
+            "line": " javascript/cookie.js:11"
+        },
+        {
+            "message": "unknown tag: desc",
+            "line": " javascript/cookie.js:11"
+        },
+        {
+            "message": "unknown tag: desc",
+            "line": " javascript/cookie.js:11"
+        },
+        {
+            "message": "unknown tag: desc",
+            "line": " javascript/cookie.js:11"
+        },
+        {
+            "message": "unknown tag: option",
+            "line": " javascript/cookie.js:11"
+        },
+        {
+            "message": "unknown tag: option",
+            "line": " javascript/cookie.js:11"
+        },
+        {
+            "message": "unknown tag: option",
+            "line": " javascript/cookie.js:11"
+        },
+        {
+            "message": "unknown tag: option",
+            "line": " javascript/cookie.js:11"
+        },
+        {
+            "message": "unknown tag: name",
+            "line": " javascript/cookie.js:11"
+        },
+        {
+            "message": "unknown tag: cat",
+            "line": " javascript/cookie.js:11"
+        },
+        {
+            "message": "unknown tag: desc",
+            "line": " javascript/cookie.js:42"
+        },
+        {
+            "message": "unknown tag: name",
+            "line": " javascript/cookie.js:42"
+        },
+        {
+            "message": "unknown tag: cat",
+            "line": " javascript/cookie.js:42"
+        },
+        {
+            "message": "Missing item type\nCookie plugin\n\nCopyright (c) 2006 Klaus Hartl (stilbuero.de)\nDual licensed under the MIT and GPL licenses:\nhttp://www.opensource.org/licenses/mit-license.php\nhttp://www.gnu.org/licenses/gpl.html",
+            "line": " javascript/cookie.js:1"
+        },
+        {
+            "message": "Missing item type\nCreate a cookie with the given name and value and other optional parameters.",
+            "line": " javascript/cookie.js:11"
+        },
+        {
+            "message": "Missing item type\nGet the value of a cookie with the given name.",
+            "line": " javascript/cookie.js:42"
+        },
+        {
+            "message": "Missing item type\nStarting with version 2.0, this file \"boots\" Jasmine, performing all of the necessary initialization before executing the loaded environment and all of a project's specs. This file should be loaded after `jasmine.js`, but before any project source files or spec files are loaded. Thus this file can also be used to customize Jasmine for a project.\n\nIf a project is using Jasmine via the standalone distribution, this file can be customized directly. If a project is using Jasmine via the [Ruby gem][jasmine-gem], this file can be copied into the support directory via `jasmine copy_boot_js`. Other environments (e.g., Python) will have different mechanisms.\n\nThe location of `boot.js` can be specified and/or overridden in `jasmine.yml`.\n\n[jasmine-gem]: http://github.com/pivotal/jasmine-gem",
+            "line": " lib/boot.js:1"
+        },
+        {
+            "message": "Missing item type\n## Require &amp; Instantiate\n\nRequire Jasmine's core files. Specifically, this requires and attaches all of Jasmine's code to the `jasmine` reference.",
+            "line": " lib/boot.js:13"
+        },
+        {
+            "message": "Missing item type\nSince this is being run in a browser and the results should populate to an HTML page, require the HTML-specific Jasmine code, injecting the same reference.",
+            "line": " lib/boot.js:20"
+        },
+        {
+            "message": "Missing item type\nCreate the Jasmine environment. This is used to run all specs in a project.",
+            "line": " lib/boot.js:25"
+        },
+        {
+            "message": "Missing item type\n## The Global Interface\n\nBuild up the functions that will be exposed as the Jasmine public interface. A project can customize, rename or alias any of these functions as desired, provided the implementation remains unchanged.",
+            "line": " lib/boot.js:30"
+        },
+        {
+            "message": "Missing item type\nAdd all of the Jasmine global/public interface to the proper global, so a project can use the public interface directly. For example, calling `describe` in specs instead of `jasmine.getEnv().describe`.",
+            "line": " lib/boot.js:77"
+        },
+        {
+            "message": "Missing item type\nExpose the interface for adding custom equality testers.",
+            "line": " lib/boot.js:86"
+        },
+        {
+            "message": "Missing item type\nExpose the interface for adding custom expectation matchers",
+            "line": " lib/boot.js:93"
+        },
+        {
+            "message": "Missing item type\nExpose the mock interface for the JavaScript timeout functions",
+            "line": " lib/boot.js:100"
+        },
+        {
+            "message": "Missing item type\n## Runner Parameters\n\nMore browser specific code - wrap the query string in an object and to allow for getting/setting parameters from the runner user interface.",
+            "line": " lib/boot.js:107"
+        },
+        {
+            "message": "Missing item type\n## Reporters\nThe `HtmlReporter` builds all of the HTML UI for the runner page. This reporter paints the dots, stars, and x's for specs, as well as all spec names and all failures (if any).",
+            "line": " lib/boot.js:120"
+        },
+        {
+            "message": "Missing item type\nThe `jsApiReporter` also receives spec results, and is used by any environment that needs to extract the results  from JavaScript.",
+            "line": " lib/boot.js:133"
+        },
+        {
+            "message": "Missing item type\nFilter which specs will be run by matching the start of the full name against the `spec` query param.",
+            "line": " lib/boot.js:139"
+        },
+        {
+            "message": "Missing item type\nSetting up timing functions to be able to be overridden. Certain browsers (Safari, IE 8, phantomjs) require this hack.",
+            "line": " lib/boot.js:150"
+        },
+        {
+            "message": "Missing item type\n## Execution\n\nReplace the browser window's `onload`, ensure it's called, and then run all of the loaded specs. This includes initializing the `HtmlReporter` instance and then executing the loaded Jasmine environment. All of this will happen after all of the specs are loaded.",
+            "line": " lib/boot.js:158"
+        },
+        {
+            "message": "Missing item type\nHelper function for readability above.",
+            "line": " lib/boot.js:173"
+        }
+    ]
+}

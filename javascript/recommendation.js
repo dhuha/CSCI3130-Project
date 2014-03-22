@@ -1,45 +1,70 @@
+/**
+ * controls recommendations in the user page
+ * @module recommendaion 
+ * @requires jquery
+ */
+
 //run on document load
+/**
+ * populate reccomendations on page load
+ * @class ready 
+ */
+
 $(document).ready( function() {
 	//get the tags cookie
-	var  tags = getTags();
-	if(tags == null){
-		tags ="";
-	}
+	var user = $.cookie('username');
+	console.log("user: "  + user);
 
-	console.log(tags);
+	/**
+	* sends a get request to the server for the useres tags
+  * @method  get 
+  * @param {String} url server reqest URL
+  * @param {function} callback once the tags have been fetched
+  * @return {Strinf} the tags of the user
+  */
+	$.get(("http://centi.cs.dal.ca:60000/user/tags/"+ user ),function(tags,textStatus,jhxfq){
+		console.log("server returned: " + tags);
+		if(tags == null){
+			tags ="";
+		}
 	//hide reccomendations that havent been tagged
+		console.log(lowCardio());
+		if(tags.indexOf("lowCardio") != -1){		
+			var curr = $("#recBox").html();
+			console.log("showing lowCardio: " + curr )
+			$("#recBox").html( curr + (lowCardio() + "<br/><br/>"));
+		}
 
-	if(tags.indexOf("lowCardio") == -1){
-		console.log("removing ")
-		$("#lowCardio").hide();
-	}
+		if(tags.indexOf("lowStrength") != -1){
+			console.log("showing lowStrength")
+			var curr = $("#recBox").html();
+			$("#recBox").html( curr + (lowStrength() + "<br/><br/>"));
+		}
 
-	if(tags.indexOf("lowStrength") == -1){
-		console.log("removing ")
-		$("#lowStrength").hide();
-	}
+		if(tags.indexOf("highCardio") != -1){
+			console.log("showing highCardio");
+			var curr = $("#recBox").html();
+			$("#recBox").html( curr + (highCardio() + "<br/><br/>"));
+		}
 
-	if(tags.indexOf("highCardio") == -1){
-		console.log("removing ")
-		$("#highCardio").hide();
-	}
+		if(tags.indexOf("highStrength") != -1){
+			console.log("showing highStrength");
+			var curr = $("#recBox").html();
+			$("#recBox").html( curr + (highStrength() + "<br/><br/>"));
+		}
 
-	if(tags.indexOf("highStrength") == -1){
-		console.log("removing ")
-		$("#highStrength").hide();
-	}
+		if(tags.indexOf("lowIntensity") != -1){
+			console.log("showing lowIntensity")
+			var curr = $("#recBox").html();
+			$("#recBox").html( curr + (lowIntensity() + "<br/><br/>"));
 
-	if(tags.indexOf("lowIntensity") == -1){
-		console.log("removing ")
-		$("#lowIntensity").hide();
-	}
+		}
 
-	if(tags.indexOf("highIntensity") == -1){
-		console.log("removing ")
-		$("#highIntensity").hide();
-	}
-	function getTags() {
-		 return $.cookie("tags");
-	}
+		if(tags.indexOf("highIntensity") != -1){
+			console.log("showing highIntensity");
+			var curr = $("#recBox").html();
+			$("#recBox").html( curr + (highIntensity() + "<br/><br/>"));
+		}
 
+});
 })

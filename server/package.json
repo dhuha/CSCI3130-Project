@@ -1,0 +1,13 @@
+{
+	"name": "project",
+	"description": "csci3130 project group 16",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"express": "3.x",
+		"mongoose": "*",
+		"passport": "*",
+		"passport-local": "*",
+		"passport-twitter":"*"
+	}
+}
