@@ -1,0 +1,408 @@
+@sas
+@united
+abacus merchant
+accommodation
+accommodations
+accomodation
+accor
+affinia hospitality
+air canada
+air france
+aircanada
+airfare
+airfares
+airlines
+airplane
+airport
+airport lounge
+allegiance services
+aloft hotels
+altiuspar solutions
+americas best value inn
+americinn
+amerihost inn
+applevacations
+arcotel
+ascend collection
+atahotels
+atel network
+attractions
+axcess hotels
+b&b
+bachelor quarters
+backpacking
+banyan tree hotels and resorts
+barcelo
+basilique du sacre-coeur
+baymont inn & suites
+beach
+best western
+biking
+boarding pass
+bookit
+boscolo hotels
+british museum
+busch gardens
+caesar park
+cambria suites
+camping
+candlewood suites
+caribbean
+centre pompidou
+charming hotels
+cheapoair
+cheaptickets
+clarion hotels
+club quarters
+clubhouse inn & suites
+cmnet
+coast hotels & resorts
+columbus reservation
+comfort inns
+comfort suites
+concorde hotels
+conrad hotels
+corus hotels
+country hearth
+country inns
+courtyard by marriott
+crowne plaza hotels
+cruises
+cycling
+days inn
+delta hotels
+derag hotels
+design hotels
+desires hotels
+destination hotels & resorts
+destinations unlimited
+devere hotels
+disney world
+disneyland
+distinguished hotels
+diving
+doral resorts and conference centers
+dorchester group
+dorint resorts
+doubletree hotels
+drury hotels
+econo lodge
+eiffel tower
+element hotels
+embassy suites
+empire state building
+envergure group
+epoque hotels
+everland
+exclusive hotels
+executive hotels and resorts
+expedia
+explore
+explorer
+extra holidays
+fairfield inn
+fairmont hotels
+fiesta americana
+fishing
+flag choice hotels
+flight
+flights
+flying
+fontainebleau resorts
+four seasons
+gaylord entertainment
+giza
+global conextions
+global hotel alliance
+golden tulip hotels
+gps
+grand canyon
+grand heritage hotels
+grand hospitality
+graves hotels
+great smoky mountain
+great wall
+guesthouse international
+hampton inn
+harrah's hotels
+hawaii
+hawthorn suites
+hermitage 
+hiking
+hilton
+hilton garden inn
+hilton hotels 
+hipmunk
+historic hotels of america
+holiday
+holiday inn
+holidays
+home2 suites 
+homestead studio suites
+homewood suites
+honeymoon
+hostel
+hot key international
+hotel
+hotel and preference
+hotel camino real
+hotel indigo
+hotel port
+hotelred
+hotelrez
+hotels
+hotels gouverneur
+hotelzon
+hotusa
+hotwire
+howard johnson
+hyatt hotels and resorts
+hyatt place
+hyatt vacations
+ian schrager
+idiso global distribution hotels
+ihotelier
+independent hotels
+innadvance
+innlink
+innpoints
+innpoints reserv
+innvite
+inter-continental hotels and resorts
+interstate hotels & resorts
+islanders
+islands
+jameson inns
+jet
+joie de vivre
+jolly hotels
+jumeirah
+jurys doyle hotel group
+jurys inns
+karyon
+kayak
+kayaking
+kempinski hotels
+kenya airways
+kerry hotels
+keytel
+kimpton hotels
+knights inn
+ksl resorts
+la quinta inns & suites
+langham hotels
+lastminute
+le meridien
+leading hotels of the world
+lebua hotels and resorts
+leisurelink
+leonardo hotels
+lexington collection
+lodging
+loews hotels
+louvre
+low_cost_travel
+lufthansa
+luggage
+luxe hotels
+macdonald hotels
+magellan group
+magnolia hotels
+mainstay suites
+malmaison hotel
+mandarin oriental
+marco polo hotels
+maritim hotels
+marriott
+marriott execustay
+marriott hotel
+marriott hotels 
+marriott vacation club
+masters inn
+maybourne hotel group
+meritus hotels
+metropolitan museum
+mexico
+microtel inns
+millennium & copthorne hotels
+minto place suite hotel
+morgans hotel group
+motel 6
+movenpick hotels & resorts
+myfidelio
+n h hotels
+national mall
+new otani hotels
+niagra falls
+nikko hotels 
+noble house hotels
+notre dame
+oberoi hotels
+okura hotels & resorts
+omni hotels
+onetech solution
+onetravel
+orbitz
+orient-express hotels 
+otedis
+othon hotels
+outdoor
+outdoors
+outrigger hotels
+pacific international
+pan pacific hotels
+park
+park inn
+park plaza international
+passport
+peabody hotels
+peninsula hotels
+performance connections
+pleasure beach
+pompeii
+porter
+preferredboutique
+prince resorts
+priority pass
+protea hotels
+qatar airways
+qhotels
+quality inns
+quality reservations
+radisson hotels
+raffles international hotels and resorts
+railways
+ramada
+ramada plaza
+reconline
+red lion hotels
+red roof inns
+regent international hotels
+relais & chateaux
+renaissance hotels
+residence inn by marriott
+resort
+resort bookings
+resortquest hawaii
+resortquest international
+resorts
+rezlink intl
+rihga royal hotels
+ringhotels
+ritz-carlton hotels
+roadtrip
+rock resorts
+rodeway inn
+romantik hotels
+rosewood hotels
+rydges hotel group
+sabre exclusives
+sailing
+sandals resorts
+sandman hotels
+sarova hotel
+scandic hotels
+scenic
+sceptre hospitality resources
+sea world
+sercotel hotels
+shangri-la hotels and resorts
+sheraton hotels and resorts
+shilo inns
+sierra suites hotels
+sleep inns
+sol melia s.a.
+sonesta hotels
+southern sun hotels
+special properties
+springhill suites by marriott
+st. regis
+stamford hotels & resorts
+star alliance
+starhotels
+starwood hotels
+statue of liberty
+staybridge suites
+steigenberger hotel
+sterling hotels and resorts
+studio 6
+suburban hotels
+suburban lodge
+summit hotels and resorts
+super 8
+supranational
+surf
+surfing
+sutton place
+swiss air
+swissôtel
+sydney opera house
+synxis
+taj group of hotels
+taj mahal
+tate modern
+the lalit
+the luxury collection
+thistle hotels
+tienanmen square
+times square
+tivoli gardens
+tokyo disneyland
+tour
+tourism
+tours
+towneplace suites by marriott
+trafalgar square
+trail
+trails
+train
+transportation
+travamerica
+travel
+travelling
+travelocity
+travelodge
+travelodge uk and europe
+trump hotel collection
+tryp by wyndham
+unirez
+united airlines
+universal orlando
+univisit
+us airways
+utell international
+v.i.p. reservations
+vacanze
+vacation
+vacation click
+vacations
+vagabond
+vantis
+vantis hotels group
+vantis/vip
+versailles
+villager
+voyage
+w hotels
+waldorf astoria hotels & resorts
+walt disney world resorts
+warwick international hotels
+webres
+wedding
+wesjet
+westcoast partners
+westin hotels and resorts
+westjet
+westmark hotels
+wingate inns
+wizcom.trust
+woodfin suite hotels
+world hotels and resorts
+worldres
+worldventure
+worldventures
+wyndham brands
+wyndham hotels
+xn global res 
+yokohama hakkeijima
+yosemite 
