@@ -127,6 +127,13 @@ $(document).ready( function() {
 		}
 		var username = firstName + "_" + lastName ;
 		//Add a new user to the server!
+
+
+
+		//get the password and twitter. 
+
+		var twitter = $.("twitterHandle").val();
+		var password = $.("password").val();
 		console.log("attempting to post");
 
 		/**
@@ -134,7 +141,7 @@ $(document).ready( function() {
 		 * @method post 
 		 * @return {function} callback changes the page upon successfull user creation 
 	 	*/
-		$.post("http://centi.cs.dal.ca:60000/user/add",{username: username , tags: tags }, function(data, textStatus,jqXHR){
+		$.post("http://centi.cs.dal.ca:60000/user/add",{username: username , tags: tags , handle: twitter, password: password}, function(data, textStatus,jqXHR){
 			//load the next page on successful add 
 			console.log("server returned: " + data);
 			$.cookie("username",username,{path:"/", expires:7});
