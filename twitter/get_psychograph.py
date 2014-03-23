@@ -11,27 +11,7 @@ class PsychoAnalyzer(object):
         ROOT_DIR = os.path.abspath(os.path.dirname(__file__))
         self.WORD_ALL = {}
         self.CLASSNAMES = {
-            'art': 1,
-            'fashion': 1,
-            'business': 1,
-            'literature': 1,
-            'politics': 1,
-            'science': 1,
-            'business': 1,
-            'music': 1,
-            'technology': 1,
-            'travel': 1,
-            'movies': 1,
-            'books': 1,
-            'video_games': 1,
-            'comics': 1,
-            'nature': 1,
             'fitness': 1, 
-            'food_beverage': 1,
-            'football': 1,
-            'baseball': 1,
-            'basketball': 1,
-            'hockey': 1,
         }
 
         for name in self.CLASSNAMES:

@@ -61,7 +61,3 @@ def download(screen_name):
 
 
 
-screen_name=sys.argv[1]
-tweets,information = download(screen_name)
-for line in tweets:
-    print line

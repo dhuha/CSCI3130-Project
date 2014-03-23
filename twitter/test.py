@@ -3,7 +3,7 @@ import json
 test_data = open('lg_users_tweetBio')
 
 psy = PsychoAnalyzer()
-out_data_path = 'test_result/'
+out_data_path = ''
 for name in  psy.CLASSNAMES.keys():
     out_data = open(out_data_path+name,'a')
 def test(test_data):
