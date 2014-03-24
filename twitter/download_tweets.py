@@ -38,7 +38,7 @@ def download(screen_name):
             path ='new_image/'+ name+'.jpg'
             f = open(path,"wb")
             f.write(data) 
-            time.sleep(8) 
+            time.sleep(5) 
             for i in range(0,4):
             	print "Downloading",i,"th term"
                 for line in stream:
@@ -53,11 +53,12 @@ def download(screen_name):
                     break
              	stream = ts.statuses.user_timeline(**kwargs)
                 print "Sleeping"
-                time.sleep(8)
+                time.sleep(5)
 
     	except Exception:
         	print sys.exc_info()
-    	return tweets,information
+	information['tweets'] = tweets
+    	return information
 
 
 
