@@ -56,7 +56,8 @@ def download(screen_name):
                 time.sleep(5)
 
     	except Exception:
-        	print sys.exc_info()
+        	print "Twitter screen name does not exist, please try again"
+		sys.exit(0)	
 	information['tweets'] = tweets
     	return information
 
