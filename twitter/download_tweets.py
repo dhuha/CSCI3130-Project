@@ -20,15 +20,16 @@ def download(screen_name):
 	name = screen_name.strip('\n')
 	information = {}
 	information['screen_name'] = name
-
+	
 	tweets = []
 	print name
 	try:
             stream = ts.statuses.user_timeline(screen_name = name, count = 200)
             kwargs = {'screen_name':name,'count':200}
 	    if len(stream)!=0:
+                information['name'] = stream[0]['user']['name']
                 information['bio'] = stream[0]['user']['description']
-                #print information['bio']
+                print information['name']
             print "Donload user ",name," information"
             information['entities'] = stream[0]['user']
             print information['entities']['location']
@@ -38,7 +39,7 @@ def download(screen_name):
             path ='new_image/'+ name+'.jpg'
             f = open(path,"wb")
             f.write(data) 
-            time.sleep(5) 
+            time.sleep(3) 
             for i in range(0,4):
             	print "Downloading",i,"th term"
                 for line in stream:
@@ -53,7 +54,7 @@ def download(screen_name):
                     break
              	stream = ts.statuses.user_timeline(**kwargs)
                 print "Sleeping"
-                time.sleep(5)
+                time.sleep(3)
 
     	except Exception:
         	print "Twitter screen name does not exist, please try again"

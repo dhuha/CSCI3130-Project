@@ -9,8 +9,8 @@ psy = PsychoAnalyzer()
 def test(tweet_bio):
     result = {}	
     name  = tweet_bio['screen_name']
-    result['name'] = tweet_bio['name']   
-    print result['name'],'\t',
+    result['name'] = tweet_bio['screen_name']    
+    print name,'\t',
     out_put = open(name,"w")
     user_bio_list = []
      
