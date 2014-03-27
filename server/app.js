@@ -12,18 +12,16 @@
  var db = mongoose.connection;
  var passport = require('passport');
  var Users;
- app.use(express.session({ secret: 'group16_private' })); // session secret
- app.use(passport.initialize());
- app.use(passport.session()); // persistent login sessions
- app.use(flash()); // use connect-flash for flash messages stored in session
-
+ var sys = require('sys');
+ var exec = require('child_process').exec;
  db.on('error', console.error.bind(console, 'connection error:'));
  db.once('open', function callback () {
   var userSchema = new Schema({
     username: String,
     tags: String,
     handle: String,
-    password: String
+    password: String,
+    ntags:String
   });
   userSchema.methods.validPassword = function(password) {
     return password == this.password;
@@ -76,16 +74,37 @@ app.get('/user/tags/:id',function(req,res){
    }
  });
 });
+app.get('/user/ntags/:id',function(req,res){
+  console.log('tag request');
+  return  Users.findOne({username: req.params.id},function(err, u){
+    if(!err){
+      return res.send(u.ntags);
+    }else{
+     return res.send(err);
+   }
+ });
+});
+app.get('/user/twitter/:id',function(req,res){
+  console.log('tag request');
+  res.send(req.params.id);
+});
+
+
 
 app.post('/user/add',function(req,res){
+	console.log(req.body.username+req.body.handle);
 	var nUser = new Users({
 		username: req.body.username,
-		tags: req.body.tags
+		tags: req.body.tags,
+		ntags: req.body.ntags,
+		handle: req.body.handle,
+		password: req.body.password
 	});
   console.log(nUser);
   nUser.save(function (err) {
   	if (!err){
       console.log('new user');
+      //exec('python test.py '+req.body.handle);
       res.send('user-added');
     }
 
