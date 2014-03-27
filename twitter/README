@@ -1,0 +1,5 @@
+Fintess fan twitter analysis function:
+1. How to use fitness fan twitter analysis function:
+   1. run python test.py twitter_handle, it can be replaced  by any twitter screen name
+   2. Image will be saved in new_image folder, test result with user information will be saved in twitter_handle (json file)
+

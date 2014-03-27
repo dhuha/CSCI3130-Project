@@ -8,9 +8,7 @@
 	<link rel="shortcut icon" type="image/png" href="lib/jasmine_favicon.png">
 	<link rel="stylesheet" type="text/css" href="lib/jasmine.css">
 
-	<script type="text/javascript" src="lib/jasmine.js"></script>
-	<script type="text/javascript" src="lib/jasmine-html.js"></script>
-	<script type="text/javascript" src="lib/boot.js"></script>
+
 
 	<!-- include source files here... -->
 	<script type="text/javascript" src="javascript/survey.js"></script>
@@ -118,23 +116,34 @@
 						<input type="radio" id ="cardio_1"name="cardio1"  value="yes" /><label for="a_cardio">Yes</label></br>
 						<input type="radio" id ="cardio_2"name="cardio2"  value="no"/><label for="b_cardio">No</label></br>
 				
+						<input type="radio" id ="cardio_1"name="cardio"  value="yes" /><label for="a_cardio">Yes</label></br>
+						<input type="radio" id ="cardio_2"name="cardio"  value="no"/><label for="b_cardio">No</label></br>
 						
-					
+						
+						
 						<label for="recommendation">Would you like recommendations on nutritional foods for improving intensity?</label> </br>
 						<input type="radio" id ="intensity_1"name="intensity1"  value="yes" /><label for="a_intensity">Yes</label></br>
 						<input type="radio" id ="insensity_2"name="intensity2"  value="no"/><label for="b_intensity">No</label></br>
 						
 						
-					
+						
 						<label for="recommendation">Would you like recommendations on nutritional foods for improving strength?</label> </br>
 						<input type="radio" id ="strength_1"name="strength1"  value="yes" /><label for="a_strength">Yes</label> </br>
 						<input type="radio" id ="strength_2"name="strength2"  value="no"/><label for="b_strength">No</label>	</br>
-		
+	
+						<input type="radio" id ="strength_1"name="strength"  value="yes" /><label for="a_strength">Yes</label> </br>
+						<input type="radio" id ="strength_2"name="strength"  value="no"/><label for="b_strength">No</label>	</br>
+						
+					</div>
+					<div>
+						<label> Twitter Handle @</label><input type="text" id="twitterHandle" name="twitterHandle" /> <br/>
+
+						<label> Password: </label><input type="password" id="password" name="password" />
 					</div>
 				</div>						
 			</div>
-		</form>
-		<button  id = "submit">Submit Information</button>
-	</div>	
-</body>
-</html>	
+			
+			<button  id = "submit">Submit Information</button> </form>
+		</div>	
+	</body>
+	</html>	
