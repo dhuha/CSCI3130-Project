@@ -1,25 +1,41 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="javascript/jquery-1.8.3.min.js"></script>
+	<script type = "text/javascript" src = "javascript/cookie.js"></script>
+	<link rel="shortcut icon" type="image/png" href="lib/jasmine_favicon.png">
+	<link rel="stylesheet" type="text/css" href="lib/jasmine.css">
+
+	<script type="text/javascript" src="lib/jasmine.js"></script>
+	<script type="text/javascript" src="lib/jasmine-html.js"></script>
+	<script type="text/javascript" src="lib/boot.js"></script>
+
+	<!-- include source files here... -->
+	<script type="text/javascript" src="javascript/login.js"></script>
+
+	<!-- include spec files here... -->
+	<script type="text/javascript" src="test/loginSpec.js"></script>
+
 	<meta name="author" content="Denays Cobas Lamezon" />
 	<meta name="description" content= "User Login Page" />
 
 	<title>User Login</title>
 
 
-	<link href="css/styleUserLogin.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/styleUserLogin.css" rel="stylesheet" type="text/css" media="all" />
 
 
 </head>
 <body>
-	<div id = "top_image"> <img src="pictures/Health-and-Fitness.png" alt="" width="800" height="317"></div>
+	<div id = "top_image"> <img src="pics/Health-and-Fitness.png" alt="" width="800" height="317"></div>
 	<div id = "complete_wrap">
 
 		<h3><center>Fitness and Nutritional Phone Application</center></h3>
 
 		<form action="">
-			<div>
-				<center><label for = "user_name">User Name:</label><input type="text" name="user_name" id="user_name" value= ""/><center>
+			<div id = "login">
+				<center><label for = "user_name">Login with Twitter account:</label><input type="text" name="user_name" id="user_name" value= ""/><center>
 			</div></br>
 
 			<div id = "password">

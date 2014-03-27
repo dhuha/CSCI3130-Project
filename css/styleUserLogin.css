@@ -35,4 +35,8 @@ label{
  }
  #password{
  	padding-top: -10px;
+	margin-left: 10px;
+ }
+ #login{
+	margin-right: 100px;
  }

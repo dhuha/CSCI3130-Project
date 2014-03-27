@@ -1,0 +1,110 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="javascript/jquery-1.8.3.min.js"></script>
+	<script type = "text/javascript" src = "javascript/cookie.js"></script>
+	<link rel="shortcut icon" type="image/png" href="lib/jasmine_favicon.png">
+	<link rel="stylesheet" type="text/css" href="lib/jasmine.css">
+
+	<script type="text/javascript" src="lib/jasmine.js"></script>
+	<!--script type="text/javascript" src="lib/jasmine-html.js"></script-->
+	<script type="text/javascript" src="lib/boot.js"></script>
+
+	<!-- include source files here... -->
+	<!--script type="text/javascript" src="javascript/login.js"></script-->
+
+	<!-- include spec files here... -->
+	<!--script type="text/javascript" src="test/loginSpec.js"></script-->
+
+	<meta name="author" content="Dhuha" />
+	<meta name="description" content= "Workout Form" />
+
+	<title>Workout Form</title>
+
+
+	<!--link href="css/styleWorkoutForm.css" rel="stylesheet" type="text/css" media="all" /-->
+
+
+</head>
+
+<style>
+	.btnDiv{background-color: lightblue; margin: 10px; text-align: center;}
+	.btnDiv.selected{background-color: lightgreen;}
+	.tabBtnDiv{background-color: lightgray; border: 1px solid darkgray; text-align: center; padding: 5px; float: left; cursor:pointer;}
+	.tabBtnDiv.selected{background-color: lightgreen;}
+	.menuContainer {overflow: auto; text-align: right; float:right;}
+	.contentContainer {overflow:auto; float: left; width: 70%;}
+	h4 {padding: 5px 0 5px 0; margin: 0px;}
+</style>
+
+<body>
+	<div id = "complete_wrap" style="overflow:auto">
+		<div id="menu" class="menuContainer">
+			<a class="btnDiv" href="userpage.html">Show history</a>
+			<a class="btnDiv" href="user_login.html">Exit</a>
+		</div>
+		<div id="contentcontainer" class="contentContainer">
+			<h2>Keep track of your workout history</h2>
+			<div id="workoutdatadiv">
+				<h4>Select workout type</h4>
+				<br>
+				<div style="overflow:auto;">
+					<div id="runningBtn" class="tabBtnDiv selected">Running</div>
+					<div id="pushUpBtn" class="tabBtnDiv">Push up</div>
+					<div id="barbellBtn" class="tabBtnDiv">Barbell</div>
+				</div>
+				<hr>
+				<h4>Enter data</h4>
+				<br>
+				<label>Date</label>
+				<input id="datefield" type="text" placeholder="YYYY-MM-DD"></input>
+				<div id="contentdiv">
+					<div id="runningBtnContent">
+						<label>Duration (mins)</label>
+						<input id="duration" type="text"></input>
+					</div>
+					<div id="pushUpBtnContent" style="display:none">
+						<label>Number of repetitions</label>
+						<input id="reps" type="text"></input>
+					</div>
+					<div id="barbellBtnContent" style="display:none">
+						<label>Weight (lb)</label>
+						<input id="weight" type="text"></input>
+					</div>
+				</div>
+				<button id="saveBtn">Save</button>
+			</div>
+			<div id="chartdiv" style="display:none">
+				<h4>History</h4>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<script>
+	$(".tabBtnDiv").bind("click",function(){
+		$(".tabBtnDiv").removeClass("selected");
+		$(this).addClass("selected");
+		$("#contentdiv div").hide();
+		$("#"+$(this).attr("id")+"Content").show();
+	});
+	
+	$("#newdatabtn").bind("click",function(){
+		$("#newdatabtn").addClass("selected");
+		$("#showhistorybtn").removeClass("selected");
+		$("#chartdiv").hide();
+		$("#workoutdatadiv").show();
+	});
+
+	$("#showhistorybtn").bind("click",function(){
+		$("#newdatabtn").removeClass("selected");
+		$("#showhistorybtn").addClass("selected");
+		$("#workoutdatadiv").hide();
+		$("#chartdiv").show();
+	});
+
+</script>
+
+</html>
