@@ -28,6 +28,12 @@ $(document).ready( function() {
 		var lastName = 0;
 		var gender = 0;
 		var age = 0;
+		var nutri_Lcardio = 0;
+		var nutri_Hcardio = 0;
+		var nutri_Lintensity = 0;
+		var nutri_Hintensity = 0;
+		var nutri_Lstrenght = 0;
+		var nutri_Hstrenght = 0;
 		
 
 		/**
@@ -81,7 +87,7 @@ $(document).ready( function() {
 		 * uses the tag scores from the form data to generate a tag string 
 		 * @method tagString 
 		 * @return {String} tags a string of tags seperated by commas
-	   */
+	     */
 
 		//add the tag vars to an array for easier processing
 		var tags = '';
@@ -125,6 +131,74 @@ $(document).ready( function() {
 			}
 			tagArray[max] = -1;
 		}
+		/**
+		 * parses the nutritional recommendation data from the form and updates tags 
+	 	 */
+		
+		//Code
+		 
+		/**
+		 * Parses the self rating nutritional data from the form and updates tags 
+		 * rating 
+	 	 */
+			nutri_Lcardio += parseInt($('input[name = cardio1]:checked').val());
+			nutri_Hcardio += (2 - parseInt($('input[name = cardio2]:checked').val()));
+
+			nutri_Lintensity += parseInt($('input[name = intensity1]:checked').val());
+			nutri_Hintensity += (2 - parseInt($('input[name = intensity2]:checked').val()));
+		
+			nutri_Lstrenght += parseInt($('input[name = strength1]:checked').val());
+			nutri_Hstrenght += (2 - parseInt($('input[name = strength2]:checked').val()));
+
+		/**
+		 * uses the tag scores from the nutritional recommendation form data to generate a tag string 
+		 * @method tagString 
+		 * @return {String} tags a string of tags seperated by commas
+	     */
+
+		//add the tag vars to an array for easier processing
+		var nutri_tags = '';
+		var nutri_tagArray = new Array();
+		nutri_tagArray[0] = nutri_Lcardio;
+		nutri_tagArray[1] = nutri_Hcardio;
+		nutri_tagArray[2] = nutri_Lintensity;
+		nutri_tagArray[3] = nutri_Hintensity;
+		nutri_tagArray[4] = nutri_Lstrenght;
+		nutri_tagArray[5] = nutri_Hstrenght;
+
+		console.log(nutri_tagArray);
+
+		//get the top 3 rated tags
+		for(var i=0;i<3;i++){
+			var max = -1;
+			for(var j=0;j<6;j++){
+				if(nutri_tagArray[j]>max){
+					max = j
+				}
+			}
+			switch(max){
+				case 0:
+				tags += 'nutri_Lcardio, ';
+				break;
+				case 1:
+				tags += 'nutri_Hcardio, ';
+				break;
+				case 2:
+				tags += 'nutri_Lintensity, ';
+				break;
+				case 3:
+				tags += 'nutri_Hintensity, ';
+				break;
+				case 4:
+				tags += 'nutri_Lstrenght, ';
+				break;
+				case 5:
+				tags += 'nutri_Hstrenght, ';
+				break;
+			}
+			nutri_tagArray[max] = -1;
+		}	 
+		 
 		var username = firstName + "_" + lastName ;
 		//Add a new user to the server!
 
