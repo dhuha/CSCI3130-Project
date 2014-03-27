@@ -9,17 +9,17 @@
  * handle form data on page load
  * @class ready 
  */
-$(document).ready( function() {
-	
+ $(document).ready( function() {
+
 
 /**
  * called when submit button is clicked
  * @event click 
  */
-	$(submit).click(function(){
+ $(submit).click(function(){
 	// Tag variables for counting occurence.
 		var lcardio =0;		// low cardio  
-		var lstr= 0;			// low strenght 
+		var lstr= 0;			// low strength 
 		var hcardio= 0;		//high cardio	
 		var hstr= 0;		   // high strength 
 		var lintensity = 0; // low intensity	
@@ -28,25 +28,23 @@ $(document).ready( function() {
 		var lastName = 0;
 		var gender = 0;
 		var age = 0;
-		var nutri_Lcardio = 0;
-		var nutri_Hcardio = 0;
-		var nutri_Lintensity = 0;
-		var nutri_Hintensity = 0;
-		var nutri_Lstrenght = 0;
-		var nutri_Hstrenght = 0;
+		var nutri_cardio = 0;
+		var nutri_intensity = 0;
+		var nutri_strength = 0;
+
 		
 
 		/**
 		 * parses the demographic data from the form and updates tags 
 		 * @method demographics 
-	 	 */
+		 */
 		//get the name and gender of user.
 		firstName = $(F_name).val();
 		lastName  = $(L_name).val();
 		age = parseInt($(age).val());
 		gender = $('input[name = t_gender]:checked').val();
 		
-		// Process tags for age.
+		// Process tags tfor age.
 		if(age > 40){
 			lcardio += (age - 40)/10;
 			lstr += (age - 40)/10;
@@ -56,38 +54,38 @@ $(document).ready( function() {
 		/**
 		 * parses the medical data from the form and updates tags 
 		 * @method medical 
-	 	 */
-		console.log($(diabetes).val());
-		lintensity += $(diabetes).val().indexOf("diabetes") != -1 ?  5 : 0 ;
-		lstr += $(heartD).val().indexOf("heartD") != -1 ? 2 : 0; 
-		lcardio += $(heartD).val().indexOf("heartD") != -1 ? 5 : 0;
-		lcardio	+= $(emphy).val().indexOf("emphy") != -1 ? 5 : 0;
-		lintensity	+= $(emphy).val().indexOf("emphy") != -1 ? 5 : 0;
-		lcardio	+= $(asthma).val().indexOf("asthma") != -1 ? 5 : 0;
-		
-		
+		 */
+		 console.log($(diabetes).val());
+		 lintensity += $(diabetes).val().indexOf("diabetes") != -1 ?  5 : 0 ;
+		 lstr += $(heartD).val().indexOf("heartD") != -1 ? 2 : 0; 
+		 lcardio += $(heartD).val().indexOf("heartD") != -1 ? 5 : 0;
+		 lcardio	+= $(emphy).val().indexOf("emphy") != -1 ? 5 : 0;
+		 lintensity	+= $(emphy).val().indexOf("emphy") != -1 ? 5 : 0;
+		 lcardio	+= $(asthma).val().indexOf("asthma") != -1 ? 5 : 0;
+
+
 		/**
 		 * parses the self rating data from the form and updates tags 
 		 * @method  rating 
-	 	 */
-		hintensity += parseInt($('input[name = fit]:checked').val());
-		lintensity += (5 - parseInt($('input[name = fit]:checked').val()));
+		 */
+		 hintensity += parseInt($('input[name = fit]:checked').val());
+		 lintensity += (5 - parseInt($('input[name = fit]:checked').val()));
 
-		hcardio += parseInt($('input[name = fit1]:checked').val());
-		lcardio += (5 - parseInt($('input[name = fit1]:checked').val()));
-		
-		hstr += parseInt($('input[name = fit2]:checked').val());
-		lstr += (5 - parseInt($('input[name = fit2]:checked').val()));
+		 hcardio += parseInt($('input[name = fit1]:checked').val());
+		 lcardio += (5 - parseInt($('input[name = fit1]:checked').val()));
 
-		hstr += parseInt($('input[name = fit3]:checked').val());
-		lstr += (5 - parseInt($('input[name = fit3]:checked').val()));	 
+		 hstr += parseInt($('input[name = fit2]:checked').val());
+		 lstr += (5 - parseInt($('input[name = fit2]:checked').val()));
+
+		 hstr += parseInt($('input[name = fit3]:checked').val());
+		 lstr += (5 - parseInt($('input[name = fit3]:checked').val()));	 
 
 
 		/**
 		 * uses the tag scores from the form data to generate a tag string 
 		 * @method tagString 
 		 * @return {String} tags a string of tags seperated by commas
-	     */
+		 */
 
 		//add the tag vars to an array for easier processing
 		var tags = '';
@@ -131,74 +129,35 @@ $(document).ready( function() {
 			}
 			tagArray[max] = -1;
 		}
-		/**
-		 * parses the nutritional recommendation data from the form and updates tags 
-	 	 */
-		
-		//Code
-		 
+	  
 		/**
 		 * Parses the self rating nutritional data from the form and updates tags 
 		 * rating 
-	 	 */
-			nutri_Lcardio += parseInt($('input[name = cardio1]:checked').val());
-			nutri_Hcardio += (2 - parseInt($('input[name = cardio2]:checked').val()));
-
-			nutri_Lintensity += parseInt($('input[name = intensity1]:checked').val());
-			nutri_Hintensity += (2 - parseInt($('input[name = intensity2]:checked').val()));
-		
-			nutri_Lstrenght += parseInt($('input[name = strength1]:checked').val());
-			nutri_Hstrenght += (2 - parseInt($('input[name = strength2]:checked').val()));
+		 */
+		 nutri_cardio = parseInt($('input[name = cardio]:checked').val());
+		 
+		 nutri_intensity = parseInt($('input[name = intensity]:checked').val());
+		 
+		 nutri_strength = parseInt($('input[name = strength]:checked').val());
+ 
 
 		/**
 		 * uses the tag scores from the nutritional recommendation form data to generate a tag string 
 		 * @method tagString 
 		 * @return {String} tags a string of tags seperated by commas
-	     */
+		 */
+
 
 		//add the tag vars to an array for easier processing
 		var nutri_tags = '';
-		var nutri_tagArray = new Array();
-		nutri_tagArray[0] = nutri_Lcardio;
-		nutri_tagArray[1] = nutri_Hcardio;
-		nutri_tagArray[2] = nutri_Lintensity;
-		nutri_tagArray[3] = nutri_Hintensity;
-		nutri_tagArray[4] = nutri_Lstrenght;
-		nutri_tagArray[5] = nutri_Hstrenght;
+		if (nutri_strength) 
+			nutri_tags += "strength, " ;
+		if (nutri_cardio) 
+			nutri_tags += "cardio, ";
+		if (nutri_intensity) 
+			nutri_tags += "intensity, ";		
 
-		console.log(nutri_tagArray);
 
-		//get the top 3 rated tags
-		for(var i=0;i<3;i++){
-			var max = -1;
-			for(var j=0;j<6;j++){
-				if(nutri_tagArray[j]>max){
-					max = j
-				}
-			}
-			switch(max){
-				case 0:
-				tags += 'nutri_Lcardio, ';
-				break;
-				case 1:
-				tags += 'nutri_Hcardio, ';
-				break;
-				case 2:
-				tags += 'nutri_Lintensity, ';
-				break;
-				case 3:
-				tags += 'nutri_Hintensity, ';
-				break;
-				case 4:
-				tags += 'nutri_Lstrenght, ';
-				break;
-				case 5:
-				tags += 'nutri_Hstrenght, ';
-				break;
-			}
-			nutri_tagArray[max] = -1;
-		}	 
-		 
 		var username = firstName + "_" + lastName ;
 		//Add a new user to the server!
 
@@ -214,8 +173,8 @@ $(document).ready( function() {
 		 * creates a new user and sends to the server to be added to the database
 		 * @method post 
 		 * @return {function} callback changes the page upon successfull user creation 
-	 	*/
-		$.post("http://centi.cs.dal.ca:60000/user/add",{username: username , tags: tags , handle: twitter, password: password}, function(data, textStatus,jqXHR){
+		 */
+		 $.post("http://centi.cs.dal.ca:60000/user/add",{username: username , tags: tags , handle: twitter, password: password, ntags: nutri_tags}, function(data, textStatus,jqXHR){
 			//load the next page on successful add 
 			console.log("server returned: " + data);
 			$.cookie("username",username,{path:"/", expires:7});
@@ -227,6 +186,6 @@ $(document).ready( function() {
 
 			}
 		});
-	})
+		})
 }) 
 
