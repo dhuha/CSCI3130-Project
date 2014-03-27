@@ -9,14 +9,17 @@
  * handle form data on page load
  * @class ready 
  */
+console.log("Javascript loading")
 $(document).ready( function() {
 	
-
+console.log("Documents ready")
 /**
  * called when submit button is clicked
  * @event click 
- */
-	$(submit).click(function(){
+ */	
+	$("#submit").click(function(event){
+	 	console.log("button pressed")
+		event.preventDefault();
 	// Tag variables for counting occurence.
 		var lcardio =0;		// low cardio  
 		var lstr= 0;			// low strenght 
@@ -206,8 +209,8 @@ $(document).ready( function() {
 
 		//get the password and twitter. 
 
-		var twitter = $.("twitterHandle").val();
-		var password = $.("password").val();
+		var twitter = $("twitterHandle").val();
+		var password = $("password").val();
 		console.log("attempting to post");
 
 		/**
