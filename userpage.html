@@ -2,96 +2,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <script type="text/javascript" src="javascript/jquery-1.8.3.min.js"></script>
-  <link rel="shortcut icon" type="image/png" href="lib/jasmine_favicon.png">
-  <link rel="stylesheet" type="text/css" href="lib/jasmine.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="javascript/jquery-1.8.3.min.js"></script>
+	<link rel="shortcut icon" type="image/png" href="lib/jasmine_favicon.png">
+	<link rel="stylesheet" type="text/css" href="lib/jasmine.css">
 
-  <script type="text/javascript" src="lib/jasmine.js"></script>
-  <script type="text/javascript" src="lib/jasmine-html.js"></script>
-  <script type="text/javascript" src="lib/boot.js"></script>
+	<script type="text/javascript" src="lib/jasmine.js"></script>
+	<script type="text/javascript" src="lib/jasmine-html.js"></script>
+	<script type="text/javascript" src="lib/boot.js"></script>
 
 
-  <title> Your Health Process </title>
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-  <style type="text/css" src="your_health_process.css"></style> 
-  <script type = "text/javascript" src = "javascript/cookie.js"></script>
-  <script type = "text/javascript" src= "javascript/RecommendationNutrition.js"></script>
-  <script type="text/javascript" src="javascript/recommendation.js"></script>
-  <script type="text/javascript" src="test/reccomendationSpec.js"></script>
+	<title> Your Health Process </title>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<style type="text/css" src="your_health_process.css"></style> 
+	<script type = "text/javascript" src = "javascript/cookie.js"></script>
+	<script type = "text/javascript" src= "javascript/RecommendationNutrition.js"></script>
+	<script type="text/javascript" src="javascript/recommendation.js"></script>
+	<script type="text/javascript" src="test/reccomendationSpec.js"></script>
 </head>
 <script>
-  $(function() {
-    $( "#menu" ).menu();
-  });
+	$(function() {
+		$( "#menu" ).menu();
+	});
 </script>
 </head>
 <body>
-<div id = "comple_wrapper" style = "background-color:#CCFF99;
-									width:1000px;
-									margin-right: 50px;
-									margin-left: 50px;
-									border: 1px solid green;
-									padding-top: 5px;
-													">
+	<div id = "comple_wrapper" style = "background-color:#CCFF99;
+	width:1000px;
+	margin-right: 50px;
+	margin-left: 50px;
+	border: 1px solid green;
+	padding-top: 5px;
+	">
 	<h1><center>User's Finess and Health Progress</center></h1>								
-									
-  <div id="container" style="width:1000px;background-color:#CCFF99">
-    <div id="header" style="
-						background-color:#FFFFFF;
-						height:70px;
-						border: 1px solid green;
-						padding-top:5px;">
-      <h3 style="
-				margin-bottom:0;">
-				<center> Progress Health </center></h3>
-    </div>
-    <div id="content" style="
-						background-color:#FFFFFF;
-						clear:both;
-						text-align:center;
-						border: 1px solid green;
-						padding-top: 5px;
-						margin-top: 10px;">
-      <h3><center>User's Bar Chart Progress</center></h3>
-    </div>
-    <div style = " padding-top: 10px;
-					">
-      <div id="Recommendation" style="
-							   background-color:#FFFFFF;
-							   width:489px;
-							   float:left;
-							   border: 1px solid green;
-							   padding-left: 12px;">
-        <h3><center>Exercise Recommendations</center></h3>
-		</div>
-			<div id = "whiteBox" name= "whitebox"></div>
-      
-	  <div id = "nutrition" style = "background-color:#FFFFFF;
-									width:495px;
-									float:left;
-									border: 1px solid green;
-									">
-		<h3><center>Nutritional Recomendations</center></h3>
-	  </div>
-		<div id = "whiteBox1" name= "whitebox1"></div>
-	</div>	
-      <div id="footer2" style="
-						background-color:#FFFFFF;
-						width:1000px;
-						float:left;
-						border: 1px solid green;
-						margin-top: 10px;" >
-						
-						
-        <h3><center>Feeds</center></h3>
-        <a href="http://www.thisisfitworkouts.com/quickie-doctrine/workout-guidelines/">PRE-WORKOUT NOSH</a></br> 
-		</div>
-     
-   
-  </div>
-  </div>
+
+	<div id="container" style="width:1000px;background-color:#CCFF99">
+		<div id="header" style="
+		background-color:#FFFFFF;
+		height:70px;
+		border: 1px solid green;
+		padding-top:5px;
+		padding-top: 10px;">
+
+		<h3 style="
+		margin-bottom:5px";> <center>User's Profile</center></h3>
+		<!--User's profile picture from tweeter account-->
+		<img src="url" alt="Picture">  
+		<!-- User's fitness information from Tweeter account-->
+		<p style="margin-left: 100px;
+				  padding-bottom: 100px;">Text in here</p>
+
+
+	</div>
+
+	<div id="header" style="
+		background-color:#FFFFFF;
+		height:70px;
+		border: 1px solid green;
+		padding-top:5px;
+		margin-top:10px;">
+		<h3 style="
+		margin-bottom:0;">
+	<center> Progress Health </center></h3>
+	</div>
+	<div id="content" style="
+		background-color:#FFFFFF;
+		clear:both;
+		text-align:center;
+		border: 1px solid green;
+		margin-top: 10px;">
+<h3><center>User's Bar Chart Progress</center></h3>
+</div>
+<div style = " padding-top: 10px;
+		">
+		<div id="Recommendation" style="
+		background-color:#FFFFFF;
+		width:489px;
+		float:left;
+		border: 1px solid green;
+		padding-left: 12px;">
+<h3><center>Exercise Recommendations</center></h3>
+</div>
+<div id = "whiteBox" name= "whitebox"></div>
+
+<div id = "nutrition" style = "background-color:#FFFFFF;
+		width:495px;
+		float:left;
+		border: 1px solid green;
+		">
+<h3><center>Nutritional Recomendations</center></h3>
+</div>
+<div id = "whiteBox1" name= "whitebox1"></div>
+</div>	
+<div id="footer2" style="
+		background-color:#FFFFFF;
+		width:1000px;
+		float:left;
+		border: 1px solid green;
+		margin-top: 10px;" >
+
+
+<h3><center>Feeds</center></h3>
+<a href="http://www.thisisfitworkouts.com/quickie-doctrine/workout-guidelines/">PRE-WORKOUT NOSH</a></br> 
+</div>
+
+
+</div>
+</div>
 </body>
 </html>
