@@ -11,12 +11,14 @@
  */
  $(document).ready( function() {
 
-
+console.log("Document ready")
 /**
  * called when submit button is clicked
  * @event click 
- */
- $(submit).click(function(){
+ */	
+	$("#submit").click(function(event){
+	 	console.log("button pressed")
+		event.preventDefault();
 	// Tag variables for counting occurence.
 		var lcardio =0;		// low cardio  
 		var lstr= 0;			// low strength 
@@ -165,8 +167,8 @@
 
 		//get the password and twitter. 
 
-		var twitter = $.("twitterHandle").val();
-		var password = $.("password").val();
+		var twitter = $("twitterHandle").val();
+		var password = $("password").val();
 		console.log("attempting to post");
 
 		/**
