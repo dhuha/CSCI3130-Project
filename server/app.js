@@ -85,8 +85,14 @@ app.get('/user/ntags/:id',function(req,res){
  });
 });
 app.get('/user/twitter/:id',function(req,res){
-  console.log('tag request');
-  res.send(req.params.id);
+  console.log('twitter request');
+  Users.findOne({username: req.params.id},function(err, u){
+    if(!err){
+      return res.sendfile(u.handle);
+    }else{
+     return res.send(err);
+   }
+ });
 });
 
 
@@ -104,8 +110,16 @@ app.post('/user/add',function(req,res){
   nUser.save(function (err) {
   	if (!err){
       console.log('new user');
-      //exec('python test.py '+req.body.handle);
-      res.send('user-added');
+      exec('python test.py '+req.body.handle,function (error, stdout, stderr) {
+        if (error !== null) {
+          console.log('exec error: ' + error);
+          res.send(200);
+        }else{
+          console.log('stdout: ' + stdout);
+          console.log('stderr: ' + stderr);
+          res.send('user-added');
+       }
+      });
     }
 
   });

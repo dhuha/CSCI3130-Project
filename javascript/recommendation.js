@@ -86,4 +86,11 @@
 			$("#whiteBox1").html( curr + (lowCardioNutrition() + "<br/><br/>"));
 		}
 	});
+	$.get(("http://centi.cs.dal.ca:60000/user/twitter/"+user),function(user,textStatus,jhxfq){
+			//handle twitter here. 
+			u = JSON.parse(user);
+			$("#twitterbio").html(u.bio);
+			$("#name").html(u.name);
+
+	});
 });

@@ -8,6 +8,7 @@
 		"mongoose": "*",
 		"passport": "*",
 		"passport-local": "*",
-		"passport-twitter":"*"
+		"passport-twitter":"*",
+		"exec-sync":"*"
 	}
 }
