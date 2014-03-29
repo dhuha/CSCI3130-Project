@@ -1,120 +1,108 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-
-<head>
-	
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<script type="text/javascript" src="javascript/jquery-1.8.3.min.js"></script>
-	<script type = "text/javascript" src = "javascript/cookie.js"></script>
-	<link rel="shortcut icon" type="image/png" href="lib/jasmine_favicon.png">
-	<link rel="stylesheet" type="text/css" href="lib/jasmine.css">
-
-
-
-	<!-- include source files here... -->
-	<script type="text/javascript" src="javascript/survey.js"></script>
-
-	<!-- include spec files here... -->
-	<script type="text/javascript" src="test/surveySpec.js"></script>
-
-	<meta name="author" content="Denays Cobas Lamezon" />
-	<meta name="description" content= "Survey" />
-
-	<title>Survey</title>
-
-
-	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-
-
-</head>
-<body>
-	<div id = "complete_wrap">
-		<h1> Survey </h1>
-		<form action = "" >
-			<div>
-				<h3>Personal Information</h3>
+	<head>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript" src="javascript/jquery-1.8.3.min.js"></script>
+		<script type = "text/javascript" src = "javascript/cookie.js"></script>
+		<link rel="shortcut icon" type="image/png" href="lib/jasmine_favicon.png">
+		<link rel="stylesheet" type="text/css" href="lib/jasmine.css">
+		<!-- include source files here... -->
+		<script type="text/javascript" src="javascript/survey.js"></script>
+		<!-- include spec files here... -->
+		<script type="text/javascript" src="test/surveySpec.js"></script>
+		<meta name="author" content="Denays Cobas Lamezon" />
+		<meta name="description" content= "Survey" />
+		<title>Survey</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	</head>
+	<body>
+		<div id = "complete_wrap">
+			<h1> Survey </h1>
+			<form action = "" >
 				<div>
-					<label for="F_name"><strong>First name:</strong></label> <input type="text" name="F_name" id="F_name" value= ""/>
-				</div>
-				<div>
-					<label for="L_name"><strong>Last name:</strong></label> <input type="text" name="L_name" id="L_name" value= ""/>
-				</div>
-				<div id = "user_age">
-					<label for="age"><strong>Age:</strong></label> <input type="text" size ="5" name="age" id="age" value= "" />
-				</div>
-				<div>
-					<label for="gender"><strong>Gender</strong></label></br> 
-					<input type="radio" name="t_gender" id="m_gender" value="Male" /><label for="m_gender">Male</label><br />
-					<input type="radio" name="t_gender" id="f_gender" value="Female"/><label for="f_gender">Female</label><br />
-					<input type="radio" name="t_gender" id="x_gender" value="x"/> <label for="x_gender">Undisclosed</label><br />	
-				</div>
-				<h3> Medical Information </h3>				
-				<div>
-					<label for = "info"><strong>Do you have any of the following:</strong></label></br> 
-					
-					<span class = "separator5">
+					<h3>Personal Information</h3>
+					<div>
+						<label for="F_name"><strong>First name:</strong></label> <input type="text" name="F_name" id="F_name" value= ""/>
+					</div>
+					<div>
+						<label for="L_name"><strong>Last name:</strong></label> <input type="text" name="L_name" id="L_name" value= ""/>
+					</div>
+					<div id = "user_age">
+						<label for="age"><strong>Age:</strong></label> <input type="text" size ="5" name="age" id="age" value= "" />
+					</div>
+					<div>
+						<label for="gender"><strong>Gender</strong></label></br>
+						<input type="radio" name="t_gender" id="m_gender" value="Male" /><label for="m_gender">Male</label><br />
+						<input type="radio" name="t_gender" id="f_gender" value="Female"/><label for="f_gender">Female</label><br />
+						<input type="radio" name="t_gender" id="x_gender" value="x"/> <label for="x_gender">Undisclosed</label><br />
+					</div>
+					<h3> Medical Information </h3>
+					<div>
+						<label for = "info"><strong>Do you have any of the following:</strong></label></br>
+						
+						<span class = "separator5">
 						<input type="checkbox" name="disease1" id="diabetes" value="diabetes" /><label for="o_diabetes">diabetes</label></br>
-					</span>
-					
-					
-					<span class = "separator5">
+						</span>
+						
+						
+						<span class = "separator5">
 						<input type="checkbox" name="disease2" id="heartD" value="known_heart_disease" /><label for="q_heartD">known heart disease</label></br>
-					</span>
-					
-					
-					<span class = "separator5">
+						</span>
+						
+						
+						<span class = "separator5">
 						<input type="checkbox" name="disease3" id="emphy" value="emphysema" /><label for="s_emphy">emphysema</label></br>
-					</span>
-					
-					
-					<span class = "separator5">
+						</span>
+						
+						
+						<span class = "separator5">
 						<input type="checkbox" name="disease6" id="asthma" value="asthma" /><label for="y_asthma">asthma</label>
-					</span>		
-				</div>
-
-				<h3> Personal Fitness </h3>
-				<div>
-					<label for="perception"><strong> Assign a number 1 throught 5 to rate the following 
-						statements accroding to your perception of the following, 1 represents the lowest and 5 the represents the 
+						</span>
+					</div>
+					<h3> Personal Fitness </h3>
+					<div>
+						<label for="perception"><strong> Assign a number 1 throught 5 to rate the following
+							statements accroding to your perception of the following, 1 represents the lowest and 5 the represents the
 						highest level.</strong></label></br>
 					</div>
 					<label for="current_fitness_info">How fit you currently feel?</label>
 					<span id = "separator13">
-						<input type="radio" id ="fit_1" name="fit"  value="1" /><label for="a_fit">1</label>
-						<input type="radio" id ="fit_2" name="fit"  value="2"/><label for="b_fit">2</label>
-						<input type="radio" id ="fit_3" name="fit"  value="3"/><label for="c_fit">3</label>
-						<input type="radio" id ="fit_4" name="fit"  value="4"/><label for="d_fit">4</label>
-						<input type="radio" id ="fit_5" name="fit"  value="5"/><label for="e_fit">5</label></br>
-					</span>	
+					<input type="radio" id ="fit_1" name="fit"  value="1" /><label for="a_fit">1</label>
+					<input type="radio" id ="fit_2" name="fit"  value="2"/><label for="b_fit">2</label>
+					<input type="radio" id ="fit_3" name="fit"  value="3"/><label for="c_fit">3</label>
+					<input type="radio" id ="fit_4" name="fit"  value="4"/><label for="d_fit">4</label>
+					<input type="radio" id ="fit_5" name="fit"  value="5"/><label for="e_fit">5</label></br>
+					</span>
 					<label for="current_fitness_info">Your capacity for aerobic activities</label>
 					<span id = "separator14">
-						<input type="radio" id ="fit1_1" name="fit1"   value="1" /><label for="a_fit">1</label>
-						<input type="radio" id ="fit1_2" name="fit1"   value="2"/><label for="b_fit">2</label>
-						<input type="radio" id ="fit1_3" name="fit1"   value="3"/><label for="c_fit">3</label>
-						<input type="radio" id ="fit1_4" name="fit1"   value="4"/><label for="d_fit">4</label>
-						<input type="radio" id ="fit1_5" name="fit1"   value="5"/><label for="e_fit">5</label></br>
-					</span>	
+					<input type="radio" id ="fit1_1" name="fit1"   value="1" /><label for="a_fit">1</label>
+					<input type="radio" id ="fit1_2" name="fit1"   value="2"/><label for="b_fit">2</label>
+					<input type="radio" id ="fit1_3" name="fit1"   value="3"/><label for="c_fit">3</label>
+					<input type="radio" id ="fit1_4" name="fit1"   value="4"/><label for="d_fit">4</label>
+					<input type="radio" id ="fit1_5" name="fit1"   value="5"/><label for="e_fit">5</label></br>
+					</span>
 					<label for="current_fitness_info">Your muscular strength</label>
 					<span id = "separator15">
-						<input type="radio" id ="fit2_1" name="fit2"  value="1" /><label for="a_fit">1</label>
-						<input type="radio" id ="fit2_2" name="fit2"  value="2" /><label for="b_fit">2</label>
-						<input type="radio" id ="fit2_3" name="fit2"  value="3" /><label for="c_fit">3</label>
-						<input type="radio" id ="fit2_4" name="fit2"  value="4" /><label for="d_fit">4</label>
-						<input type="radio" id ="fit2_5" name="fit2"  value="5" /><label for="e_fit">5</label></br>
+					<input type="radio" id ="fit2_1" name="fit2"  value="1" /><label for="a_fit">1</label>
+					<input type="radio" id ="fit2_2" name="fit2"  value="2" /><label for="b_fit">2</label>
+					<input type="radio" id ="fit2_3" name="fit2"  value="3" /><label for="c_fit">3</label>
+					<input type="radio" id ="fit2_4" name="fit2"  value="4" /><label for="d_fit">4</label>
+					<input type="radio" id ="fit2_5" name="fit2"  value="5" /><label for="e_fit">5</label></br>
 					</span>
 					<label for="current_fitness_info">Your body's flexibility</label>
 					<span id = "separator16">
-						<input type="radio" id ="fit3_1"name="fit3"  value="1" /><label for="a_fit">1</label>
-						<input type="radio" id ="fit3_2"name="fit3"  value="2"/><label for="b_fit">2</label>
-						<input type="radio" id ="fit3_3"name="fit3"  value="3"/><label for="c_fit">3</label>
-						<input type="radio" id ="fit3_4"name="fit3"  value="4"/><label for="d_fit">4</label>
-						<input type="radio" id ="fit3_5"name="fit3"  value="5"/><label for="e_fit">5</label></br>
-					</span>	
+					<input type="radio" id ="fit3_1"name="fit3"  value="1" /><label for="a_fit">1</label>
+					<input type="radio" id ="fit3_2"name="fit3"  value="2"/><label for="b_fit">2</label>
+					<input type="radio" id ="fit3_3"name="fit3"  value="3"/><label for="c_fit">3</label>
+					<input type="radio" id ="fit3_4"name="fit3"  value="4"/><label for="d_fit">4</label>
+					<input type="radio" id ="fit3_5"name="fit3"  value="5"/><label for="e_fit">5</label></br>
+					</span>
 					<div>
 						<h3>Nutritional Recommendation</h3>
 						
 						<label for="recommendation">Would you like recommendations on nutritional foods for improving cardio?</label> </br>
 						<input type="radio" id ="cardio_1"name="cardio"  value="1" /><label for="a_cardio">Yes</label></br>
-						<input type="radio" id ="cardio_2"name="cardio"  value="0"/><label for="b_cardio">No</label></br>	
+						<input type="radio" id ="cardio_2"name="cardio"  value="0"/><label for="b_cardio">No</label></br>
 						
 						
 						<label for="recommendation">Would you like recommendations on nutritional foods for improving intensity?</label> </br>
@@ -126,18 +114,17 @@
 						<label for="recommendation">Would you like recommendations on nutritional foods for improving strength?</label> </br>
 						<input type="radio" id ="strength_1"name="strength"  value="1" /><label for="a_strength">Yes</label> </br>
 						<input type="radio" id ="strength_2"name="strength"  value="0"/><label for="b_strength">No</label>	</br>
-	
+						
 						
 					</div>
 					<div>
 						<label> Twitter Handle @</label><input type="text" id="twitterHandle" name="twitterHandle" /> <br/>
-
 						<label> Password: </label><input type="password" id="password" name="password" />
 					</div>
-				</div>						
+				</div>
 			</div>
 			
-			<button  id = "submit">Submit Information</button> </form>
-		</div>	
-	</body>
-	</html>	
+		<button  id = "submit">Submit Information</button> </form>
+	</div>
+</body>
+</html>
