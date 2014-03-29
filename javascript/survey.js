@@ -167,8 +167,8 @@ console.log("Document ready")
 
 		//get the password and twitter. 
 
-		var twitter = $("twitterHandle").val();
-		var password = $("password").val();
+		var twitter = $("#twitterHandle").val();
+		var password = $("#password").val();
 		console.log("attempting to post");
 
 		/**
