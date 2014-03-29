@@ -22,10 +22,10 @@
   * @param {function} callback once the tags have been fetched
   * @return {Strinf} the tags of the user
   */
-  $.get(("http://centi.cs.dal.ca:60000/user/tags/"+ user ),function(tags,textStatus,jhxfq){
+  $.get("http://centi.cs.dal.ca:60000/user/tags/",function(tags,textStatus,jhxfq){
   	console.log("server returned: " + tags);
   	if(tags == null){
-  		tags ="";
+  		window.location = "user_login.html";
   	}
 		//hide reccomendations that havent been tagged
 		console.log(lowCardio());
