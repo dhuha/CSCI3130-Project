@@ -180,95 +180,102 @@ app.post('/user/workout/:id', function(req, res) {
 });
 
 app.get('/user/workout', function(req, res) {
-    Workouts.find({
-        username: req.session.username
-    }, function(err, docs) {
-        console.log(docs);
-        if (!err) {
-            res.send(docs);
-        }
-    })
-});
-app.get('/user/workout/:id', function(req, res) {
-    Workouts.find({
-        username: req.params.id
-    }, function(err, docs) {
-        console.log(docs);
-        if (!err) {
-            res.send(docs);
-        }
-    })
-});
+        Workouts.find({
+            username: req.session.username
+        }, function(err, docs) {
+            console.log(docs);
+            if (!err) {
+                res.send(docs);
+            }
+        })
 
-app.post('/user/add', function(req, res) {
-    console.log(req.body.username + req.body.handle);
-    var nUser = new Users({
-        username: req.body.username,
-        tags: req.body.tags,
-        ntags: req.body.ntags,
-        handle: req.body.handle,
-        password: req.body.password
-    });
-    console.log(nUser);
-    nUser.save(function(err) {
-        if (!err) {
-            console.log('new user');
-            exec('python test.py ' + req.body.handle, function(error, stdout, stderr) {
-                if (error !== null) {
-                    console.log('exec error: ' + error);
-                    res.send(200);
+        app.get('/user/twitter/pic/:id', function(req, res) {
+            Users.findOne({
+                username: req.params.id
+            }, function(err, u) {
+                res.sendfile('new_image/' + u.handle + '.jpg');
+            });
+        });
+        app.get('/user/workout/:id', function(req, res) {
+            Workouts.find({
+                username: req.params.id
+            }, function(err, docs) {
+                console.log(docs);
+                if (!err) {
+                    res.send(docs);
+                }
+            })
+        });
+
+        app.post('/user/add', function(req, res) {
+            console.log(req.body.username + req.body.handle);
+            var nUser = new Users({
+                username: req.body.username,
+                tags: req.body.tags,
+                ntags: req.body.ntags,
+                handle: req.body.handle,
+                password: req.body.password
+            });
+            console.log(nUser);
+            nUser.save(function(err) {
+                if (!err) {
+                    console.log('new user');
+                    exec('python test.py ' + req.body.handle, function(error, stdout, stderr) {
+                        if (error !== null) {
+                            console.log('exec error: ' + error);
+                            res.send(200);
+                        } else {
+                            console.log('stdout: ' + stdout);
+                            console.log('stderr: ' + stderr);
+                            res.send('user-added');
+                        }
+                    });
+                }
+
+            });
+        });
+        //handle login requests
+        app.post('/login', function(req, res) {
+            console.log(req.body.username);
+            Users.findOne({
+                handle: req.body.username
+            }, function(err, u) {
+                if (err)
+                    res.send("no_user");
+                if (req.body.password == u.password) {
+                    req.session.username = u.username;
+                    res.send("success");
                 } else {
-                    console.log('stdout: ' + stdout);
-                    console.log('stderr: ' + stderr);
-                    res.send('user-added');
+                    res.send("wrong_pass");
+                }
+
+            });
+        });
+        app.post('/logout', function(req, res) {
+            req.session.username = null;
+            res.send(200);
+        });
+
+        app.get('/user', function(req, res) {
+            if (req.session.username) {
+                res.send(req.session.username)
+            } else {
+                res.send(null);
+            }
+        });
+        app.get('/user/:id', function(req, res) {
+            Users.findOne({
+                handle: req.params.id
+            }, function(err, u) {
+                if (err) {
+                    res.send(null);
+                } else {
+                    res.send(u.username);
                 }
             });
-        }
-
-    });
-});
-//handle login requests
-app.post('/login', function(req, res) {
-    console.log(req.body.username);
-    Users.findOne({
-        handle: req.body.username
-    }, function(err, u) {
-        if (err)
-            res.send("no_user");
-        if (req.body.password == u.password) {
-            req.session.username = u.username;
-            res.send("success");
-        } else {
-            res.send("wrong_pass");
-        }
-
-    });
-});
-app.post('/logout', function(req, res) {
-    req.session.username = null;
-    res.send(200);
-});
-
-app.get('/user', function(req, res) {
-    if (req.session.username) {
-        res.send(req.session.username)
-    } else {
-        res.send(null);
-    }
-});
-app.get('/user/:id', function(req, res) {
-    Users.findOne({
-        handle: req.params.id
-    }, function(err, u) {
-        if (err) {
-            res.send(null);
-        } else {
-            res.send(u.username);
-        }
-    });
-});
+        });
 
 
-var server = app.listen(60000, function() {
-    console.log('Listening on port %d, adress %s', server.address().port, server.address().address);
-})
+        var server = app.listen(60000, function() {
+            console.log('Listening on port %d, adress %s', server.address().port, server.address().address);
+        })
