@@ -95,6 +95,7 @@ $(document).ready(function() {
             //handle twitter here.
             u = JSON.parse(user);
             console.log(u);
+            $("#twitterpic").attr("src", "new_image/" + username + ".jpg");
             $("#twitterbio").html(u.bio);
             $("#name").html(u.name);
             if (u.result == "Yes") {

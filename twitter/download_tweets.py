@@ -36,7 +36,7 @@ def download(screen_name):
             url = stream[0]['user']['profile_image_url']
             print url 
             data = urllib.urlopen(url).read()
-            path ='new_image/'+ name+'.jpg'
+            path ='new_image/'+ name +'.jpg'
             f = open(path,"wb")
             f.write(data) 
             time.sleep(3) 
