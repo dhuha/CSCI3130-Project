@@ -41,7 +41,6 @@ var enableCORS = function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
-
   // intercept OPTIONS method
   if ('OPTIONS' == req.method) {
     res.send(200);
@@ -55,7 +54,9 @@ var enableCORS = function(req, res, next) {
 // enable CORS!
 app.use(enableCORS);
 app.use(express.bodyParser());
-
+app.use(express.cookieParser("djsfhgkjhdsfkjghsjkdhfgkjhd"));
+app.use(express.session());
+app.use(app.router);
 
 
 app.get('/hello',function(req,res){
@@ -64,9 +65,13 @@ app.get('/hello',function(req,res){
 
 
 
-app.get('/user/tags/:id',function(req,res){
-  console.log('tag request');
-  return  Users.findOne({username: req.params.id},function(err, u){
+app.get('/user/tags/',function(req,res){
+  console.log(req.session)
+  console.log('tag request for ' + req.session.username);
+  if(req.session.username == null){
+    res.send(null);
+  }
+  return  Users.findOne({username: req.session.username},function(err, u){
     if(!err){
       return res.send(u.tags);	
     }else{
@@ -74,9 +79,12 @@ app.get('/user/tags/:id',function(req,res){
    }
  });
 });
-app.get('/user/ntags/:id',function(req,res){
-  console.log('tag request');
-  return  Users.findOne({username: req.params.id},function(err, u){
+app.get('/user/ntags/',function(req,res){
+  console.log('ntag request for ' + req.session.username);
+  if(req.session.username == null){
+    res.send(null);
+  }
+  return  Users.findOne({username: req.session.username},function(err, u){
     if(!err){
       return res.send(u.ntags);
     }else{
@@ -118,14 +126,32 @@ app.post('/user/add',function(req,res){
           console.log('stdout: ' + stdout);
           console.log('stderr: ' + stderr);
           res.send('user-added');
-       }
+        }
       });
     }
 
   });
 });
-app.post('/login', passport.authenticate('local', { successRedirect: '/',
-  failureRedirect: '/login' }));
+//handle login requests
+app.post('/login', function(req, res) {
+  console.log(req.body.username);
+  Users.findOne({handle:req.body.username} , function(err,u){
+    if(err)
+      res.send("no_user");
+    if(req.body.password == u.password){
+      req.session.username = u.username;
+      res.send("success");
+    }else{
+      res.send("wrong_pass");
+    }
+    
+  });
+});
+app.post('/logout',function(req,res){
+  req.session.username = null;
+  res.send(200);
+});
+
 
 var server = app.listen(60000,function(){
  console.log('Listening on port %d, adress %s',server.address().port,server.address().address);
