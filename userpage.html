@@ -12,23 +12,130 @@
 		<script type="text/javascript" src="test/reccomendationSpec.js"></script>
 		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	</head>
-	<body>
+	<script>
+  $(function() {
+    $( "#menu" ).menu();
+  });
+  
+  //Function to request workout history data from server
+	function getUserWorkoutHistoryData(){
+	//This function needs to be modified based on server endpoint for getting history
+		return {
+			pushups:[{date:new Date(2013,10,10),reps:10},
+			{date:new Date(2013,10,11),reps:15},
+			{date:new Date(2013,10,12),reps:12},
+			{date:new Date(2013,10,13),reps:10},
+			{date:new Date(2013,10,14),reps:13},
+			{date:new Date(2013,10,15),reps:9},
+			{date:new Date(2013,10,16),reps:10},
+			{date:new Date(2013,10,17),reps:15},
+			{date:new Date(2013,10,18),reps:12},
+			{date:new Date(2013,10,19),reps:10},
+			{date:new Date(2013,10,20),reps:13},
+			{date:new Date(2013,10,21),reps:9},
+			{date:new Date(2013,10,22),reps:10},
+			{date:new Date(2013,10,23),reps:15},
+			{date:new Date(2013,10,24),reps:12},
+			{date:new Date(2013,10,25),reps:10},
+			{date:new Date(2013,10,26),reps:13},
+			{date:new Date(2013,10,27),reps:9}],
+			running:[{date:'2013-10-10',time:30},
+			{date:'2013-10-11',time:35},
+			{date:'2013-10-12',time:25},
+			{date:'2013-10-15',time:45}],
+			barbell:[{date:'2013-10-10',wght:25},
+			{date:'2013-10-11',wght:15},
+			{date:'2013-10-12',wght:20},
+			{date:'2013-10-13',wght:25},
+			{date:'2013-10-14',wght:25},
+			{date:'2013-10-15',wght:30}]
+		};
+	}
+	
+	//Load the google visualization library
+	google.load("visualization", "1", {packages:["corechart"]});
+	google.setOnLoadCallback(drawChart);
+	
+	//Function which renders charts for workout history
+	function drawChart() {
+		//Call the function to get workout history
+		var dataArr = getUserWorkoutHistoryData();
+
+		//Checks if the pushups attribute is defined in the object
+		if(dataArr.pushups!=undefined){
+			//Format push up data
+			var pushupsdata = Array();
+			pushupsdata[0] = ['Date','Repititions'];
+			for(var i=0 ; i<dataArr.pushups.length ; i++){
+				pushupsdata[i+1] = [dataArr.pushups[i].date,dataArr.pushups[i].reps];
+			}
+			pushupsdata = google.visualization.arrayToDataTable(pushupsdata);
+			
+			//Draw pushup history chart
+			var chart = new google.visualization.ColumnChart(document.getElementById('chart_div1'));
+			chart.draw(pushupsdata, {
+			  title: 'Pushups',
+			  hAxis: {title: 'Date', format: 'yyyy-MM-dd'},
+			  vAxis: {title: 'Repetitiions'}
+			});
+		}
+		
+		//Check if running history is available
+		if(dataArr.running!=undefined){
+			//Format running history
+			var runningdata = Array();
+			runningdata[0] = ['Date','Duration'];
+			for(var i=0 ; i<dataArr.running.length ; i++){
+				runningdata[i+1] = [dataArr.running[i].date,dataArr.running[i].time];
+			}
+			runningdata = google.visualization.arrayToDataTable(runningdata);
+
+			//Draw running chart
+			var chart = new google.visualization.ColumnChart(document.getElementById('chart_div2'));
+			chart.draw(runningdata, {
+			  title: 'Cardio',
+			  hAxis: {title: 'Date', format: 'yyyy-MM-dd'},
+			  vAxis: {title: 'Duration (mins)'}
+			});
+		}
+		
+		//Check if barbell history is available
+		if(dataArr.barbell!=undefined){
+			//Format barbell history
+			var barbelldata = Array();
+			barbelldata[0] = ['Date','Repititions'];
+			for(var i=0 ; i<dataArr.barbell.length ; i++){
+				barbelldata[i+1] = [dataArr.barbell[i].date,dataArr.barbell[i].wght];
+			}
+			barbelldata = google.visualization.arrayToDataTable(barbelldata);
+
+			//Draw barbell chart
+			var chart = new google.visualization.ColumnChart(document.getElementById('chart_div3'));
+			chart.draw(barbelldata, {
+			  title: 'Weight Lifting',
+			  hAxis: {title: 'Date', format: 'yyyy-MM-dd'},
+			  vAxis: {title: 'Weight (lbs)'}
+			});
+		}
+	}	
+</script>
+	<body style="margin: auto;">
 		<div id = "comple_wrapper" style = "background-color:#CCFF99;
-			width:900px;
+			width:1260px;
 			margin-right: 50px;
 			margin-left: 50px;
 			border: 1px solid green;
 			padding-top: 5px;
 			">
-			<h1><center>User's Finess and Health Progress</center></h1>
-			<div id="container" style="width:900px;background-color:#CCFF99">
+			<h1 style="color: #483D8B;"><center>User's Finess and Health Progress</center></h1>
+			<div id="container" style="width:1260px;background-color:#CCFF99">
 				<div id="header" style="
 					background-color:#FFFFFF;
 					border: 1px solid green;
 					padding-top:10px;
 					margin-top: 10px;"></div>
 					<h3 style="
-					margin-bottom:5px";> <center>User's Profile</center></h3>
+					margin-bottom:5px;color: #483D8B;"> <center>User's Profile</center></h3>
 					<!--User's profile picture from tweeter account-->
 					<img id="twitterpic">
 					<!-- User's fitness information from Tweeter account-->
@@ -44,29 +151,38 @@
 				text-align:center;
 				border: 1px solid green;
 				margin-top: 10px;">
-				<h3><center>Progress</center></h3>
+				<h3 style="color: #483D8B;"><center>Progress Charts</center></h3>
 				<!--Divs for showing charts-->
-				<div id="chart_div1" style="width: 400px; height: 250px; margin-left:20px; border-style: solid; border-color: green;"></div>
-				<div id="chart_div2" style="width: 400px; height: 250px; margin-left:470px; border-style: solid; border-color: green;"></div>
-				<div id="chart_div3" style="width: 400px; height: 250px; margin-left:20px; border-style: solid; border-color: green;"></div>
+				<div id="chart_div1" style="width: 400px; height: 250px; float:left;margin-left:10px; border-style: solid; border-color: green; margin-bottom: 5px;"></div>
+				<div id="chart_div2" style="width: 400px; height: 250px; margin-left: 10px; float:left;  border-style:solid; border-color: green; margin-bottom: 5px;"></div>
+				<div id="chart_div3" style="width: 400px; height: 250px; margin-left: 10px; margin-right:10px; float:left; border-style: solid; border-color: green; margin-bottom: 5px;"></div>
+
+				<form method = "get" action="workoutform.html">
+				<div>
+					<button type="submit" style="margin-left:20px;">Please complete daily workout information</button>
+				</div>
+			</form> 
 			</div>
+			
 			<div style = " padding-top: 10px;
 				">
+
 				<div id="Recommendation" style="
 					background-color:#FFFFFF;
-					width:480px;
+					width:600px;
 					float:left;
 					border: 1px solid green;
-					padding-left: 12px;">
-					<h3><center>Exercise Recommendations</center></h3>
+					margin-right: 20px;
+					">
+					<h3 style="color: #483D8B;"><center>Exercise Recommendations</center></h3>
 					<div id = "whiteBox" name= "whitebox"><br/></div>
 				</div>
 				<div id = "nutrition" style = "background-color:#FFFFFF;
-					width:400px;
+					width:635px;
 					float:left;
 					border: 1px solid green;
 					">
-					<h3><center>Nutritional Recomendations</center></h3>
+					<h3 style="color: #483D8B;"><center>Nutritional Recomendations</center></h3>
 					<div id = "whiteBox1" name= "whitebox1"></div>
 				</div>
 			</div>
