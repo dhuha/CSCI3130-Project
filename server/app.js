@@ -36,7 +36,7 @@ db.once('open', function callback() {
 
 });
 
-mongoose.connect('mongodb://localhost/group16');
+mongoose.connect('mongodb://localhost/group16-prod');
 
 
 
