@@ -9,13 +9,13 @@ psy = PsychoAnalyzer()
 def test(tweet_bio):
     result = {}	
     name  = tweet_bio['screen_name']
-    result['name'] = tweet_bio['name']   
+    result['name'] = "Twitter Username: " + tweet_bio['name']   
     print result['name'],'\t',
     out_put = open(name,"w")
     user_bio_list = []
      
     bio  = tweet_bio['bio']
-    result['bio'] = tweet_bio['bio']
+    result['bio'] = "Twitter biography: "+ tweet_bio['bio']
     print bio,'\t',
     result['location'] = tweet_bio['entities']['location']
     total_number = str(len(tweet_bio['tweets']))
