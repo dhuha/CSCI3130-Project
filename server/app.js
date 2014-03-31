@@ -29,7 +29,7 @@
   var workoutSchema = new Schema({
     username: String,
     workout: String,
-    duration: int
+    duration: Number
   });
   Workouts = mongoose.model('Workout' , workoutSchema);
   Users = mongoose.model('User', userSchema);
@@ -143,12 +143,12 @@ app.post('/user/workout' , function(req,res){
     res.send("no-user");
   }
   var nWorkout = new Workouts({
-    username: req.session.username
-    workout: req.body.username
+    username: req.session.username,
+    workout: req.body.username,
     duration: req.body.duration
   });
   console.log(nWorkout);
-  nWorkout.save(fucntion(err) {
+  nWorkout.save(function(err) {
     if(!err){
       res.send("workout saved");
     }
@@ -156,12 +156,12 @@ app.post('/user/workout' , function(req,res){
 });
 app.post('/user/workout/:id' , function(req,res){
   var nWorkout = new Workouts({
-    username: req.params.id
-    workout: req.body.username
+    username: req.params.id,
+    workout: req.body.username,
     duration: req.body.duration
   });
   console.log(nWorkout);
-  nWorkout.save(fucntion(err) {
+  nWorkout.save(function(err) {
     if(!err){
       res.send("workout saved");
     }
@@ -230,6 +230,23 @@ app.post('/login', function(req, res) {
 app.post('/logout',function(req,res){
   req.session.username = null;
   res.send(200);
+});
+
+app.get('/user',function(req,res){
+  if(req.session.username){
+    res.send(req.session.username)
+  }else{
+    res.send(null);
+  }
+});
+app.get('/user/:id',function(req,res){
+  Users.findOne({handle:req.params.id}, function(err,u){
+    if(err){
+      res.send(null);
+    }else{
+      res.send(u.username);
+    }
+  });
 });
 
 
