@@ -10,6 +10,7 @@
 		<script type = "text/javascript" src= "javascript/RecommendationNutrition.js"></script>
 		<script type="text/javascript" src="javascript/recommendation.js"></script>
 		<script type="text/javascript" src="test/reccomendationSpec.js"></script>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	</head>
 	<body>
 		<div id = "comple_wrapper" style = "background-color:#CCFF99;
@@ -35,7 +36,7 @@
 					<p id ="name"  style="margin-left: 100px;
 					padding-bottom: 100px;"></p>
 					<p id="twitterbio" style="margin-left: 100px;
-						padding-bottom: 100px;"></p>
+					padding-bottom: 100px;"></p>
 				</div>
 				<div id="header" style="
 					background-color:#FFFFFF;
@@ -46,35 +47,42 @@
 					<h3 style="
 					margin-bottom:0;">
 					<center> Progress Health </center></h3>
-				</div>
-				<div id="content" style="
-					background-color:#FFFFFF;
-					clear:both;
-					text-align:center;
-					border: 1px solid green;
-					margin-top: 10px;">
-					<h3><center>User's Bar Chart Progress</center></h3>
-				</div>
-				<div style = " padding-top: 10px;
-					">
-					<div id="Recommendation" style="
-						background-color:#FFFFFF;
-						width:489px;
-						float:left;
-						border: 1px solid green;
-						padding-left: 12px;">
-						<h3><center>Exercise Recommendations</center></h3>
-						<div id = "whiteBox" name= "whitebox"><br/></div>
+					<div id="content" style="background-color:#CCFFFF;clear:both;text-align:center; overflow:auto;">
+						<!--Divs for showing charts-->
+						<div id="chart_div1" style="width: 400px; height: 250px; float: left;"></div>
+						<div id="chart_div2" style="width: 400px; height: 250px; float: left;"></div>
+						<div id="chart_div3" style="width: 400px; height: 250px; float: left;"></div>    </div>
+						<div>
+						</div>
+						<div id="content" style="
+							background-color:#FFFFFF;
+							clear:both;
+							text-align:center;
+							border: 1px solid green;
+							margin-top: 10px;">
+							<h3><center>User's Bar Chart Progress</center></h3>
+						</div>
+						<div style = " padding-top: 10px;
+							">
+							<div id="Recommendation" style="
+								background-color:#FFFFFF;
+								width:489px;
+								float:left;
+								border: 1px solid green;
+								padding-left: 12px;">
+								<h3><center>Exercise Recommendations</center></h3>
+								<div id = "whiteBox" name= "whitebox"><br/></div>
+							</div>
+							<div id = "nutrition" style = "background-color:#FFFFFF;
+								width:495px;
+								float:left;
+								border: 1px solid green;
+								">
+								<h3><center>Nutritional Recomendations</center></h3>
+								<div id = "whiteBox1" name= "whitebox1"></div>
+							</div>
+						</div>
 					</div>
-					<div id = "nutrition" style = "background-color:#FFFFFF;
-						width:495px;
-						float:left;
-						border: 1px solid green;
-						">
-						<h3><center>Nutritional Recomendations</center></h3>
-						<div id = "whiteBox1" name= "whitebox1"></div>
-					</div>
 				</div>
-			</div>
-		</body>
-	</html>
+			</body>
+		</html>
