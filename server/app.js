@@ -26,6 +26,12 @@
   userSchema.methods.validPassword = function(password) {
     return password == this.password;
   };
+  var workoutSchema = new Schema({
+    username: String,
+    workout: String,
+    duration: int
+  });
+  Workouts = mongoose.model('Workout' , workoutSchema);
   Users = mongoose.model('User', userSchema);
 
 });
@@ -65,17 +71,26 @@ app.get('/hello',function(req,res){
 
 
 
-app.get('/user/tags/',function(req,res){
-  console.log(req.session)
+app.get('/user/tags/:id',function(req,res){
+  console.log('tag request for ' + req.params.id);
+  return  Users.findOne({username: req.params.id},function(err, u){
+    if(!err){
+      return res.send(u.tags);	
+    }else{
+     return res.send(err);	
+   }
+ });
+});
+app.get('/user/tags',function(req,res){
   console.log('tag request for ' + req.session.username);
   if(req.session.username == null){
     res.send(null);
   }
   return  Users.findOne({username: req.session.username},function(err, u){
     if(!err){
-      return res.send(u.tags);	
+      return res.send(u.tags);  
     }else{
-     return res.send(err);	
+     return res.send(err);  
    }
  });
 });
@@ -85,6 +100,16 @@ app.get('/user/ntags/',function(req,res){
     res.send(null);
   }
   return  Users.findOne({username: req.session.username},function(err, u){
+    if(!err){
+      return res.send(u.ntags);
+    }else{
+     return res.send(err);
+   }
+ });
+});
+app.get('/user/ntags/:id',function(req,res){
+  console.log('ntag request for ' + req.session.username);
+  return  Users.findOne({username: req.params.id},function(err, u){
     if(!err){
       return res.send(u.ntags);
     }else{
@@ -102,8 +127,63 @@ app.get('/user/twitter/:id',function(req,res){
    }
  });
 });
+app.get('/user/twitter',function(req,res){
+  console.log('twitter request');
+  Users.findOne({username: req.session.username},function(err, u){
+    if(!err){
+      return res.sendfile(u.handle);
+    }else{
+     return res.send(err);
+   }
+ });
+});
 
+app.post('/user/workout' , function(req,res){
+  if(! req.session.username){
+    res.send("no-user");
+  }
+  var nWorkout = new Workouts({
+    username: req.session.username
+    workout: req.body.username
+    duration: req.body.duration
+  });
+  console.log(nWorkout);
+  nWorkout.save(fucntion(err) {
+    if(!err){
+      res.send("workout saved");
+    }
+  })
+});
+app.post('/user/workout/:id' , function(req,res){
+  var nWorkout = new Workouts({
+    username: req.params.id
+    workout: req.body.username
+    duration: req.body.duration
+  });
+  console.log(nWorkout);
+  nWorkout.save(fucntion(err) {
+    if(!err){
+      res.send("workout saved");
+    }
+  })
+});
 
+app.get('/user/workout', function(req,res){
+  Workouts.find({username:req.session.username},function(err,docs){
+    console.log(docs);
+    if(!err){
+      res.send(docs);
+    }
+  })
+});
+app.get('/user/workout/:id', function(req,res){
+  Workouts.find({username:req.params.id},function(err,docs){
+    console.log(docs);
+    if(!err){
+      res.send(docs);
+    }
+  })
+});
 
 app.post('/user/add',function(req,res){
 	console.log(req.body.username+req.body.handle);
