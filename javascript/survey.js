@@ -183,7 +183,7 @@ console.log("Document ready")
 			var cont = false;
 			cont = window.confirm("Continue?");
 			if(cont == true){
-				window.location = "userpage.html";
+				window.location = "user_login.html";
 				console.log("changing page");
 
 			}
