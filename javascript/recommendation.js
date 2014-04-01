@@ -95,19 +95,22 @@ $(document).ready(function() {
             //handle twitter here.
             u = JSON.parse(user);
             console.log(u);
-            $("#twitterpic").attr("src", "new_image/" + username + ".jpg");
+            $("#twitterpic").attr("src", "new_image/" + username + '.jpg');
             $("#twitterbio").html(u.bio);
             $("#name").html(u.name);
             if (u.result == "Yes") {
                 $("#badge").attr("src", "pics/badge.jpg");
+            } else {
+                $("#badge").attr("src", "pics/burger.jpg");
             }
 
         });
         $.get("http://centi.cs.dal.ca:60000/user/twitter/pic/" + username,
             function(data, textStatus, jhxfq) {
                 console.log('attempting to display image');
-                $("#twitterpic").html('<img src="data:image/jpg;base64,' + data + '"/>');
+                // $("#twitterpic").html('<img src="data:image/jpg;base64,' + data + '"/>');
             });
     });
+
 
 });

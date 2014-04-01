@@ -29,7 +29,8 @@ db.once('open', function callback() {
     var workoutSchema = new Schema({
         username: String,
         workout: String,
-        duration: Number
+        date: String,
+        ammount: Number
     });
     Workouts = mongoose.model('Workout', workoutSchema);
     Users = mongoose.model('User', userSchema);
@@ -169,7 +170,8 @@ app.post('/user/workout/:id', function(req, res) {
     var nWorkout = new Workouts({
         username: req.params.id,
         workout: req.body.username,
-        duration: req.body.duration
+        date: req.body.date,
+        ammount: req.body.ammount
     });
     console.log(nWorkout);
     nWorkout.save(function(err) {
@@ -194,6 +196,7 @@ app.get('/user/twitter/pic/:id', function(req, res) {
     Users.findOne({
         username: req.params.id
     }, function(err, u) {
+        console.log(u.handle);
         res.sendfile('new_image/' + u.handle + '.jpg');
     });
 });
